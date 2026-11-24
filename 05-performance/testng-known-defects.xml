@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Reproduces open performance defects. Expected to FAIL until fixed. Not part of the PR gate. -->
+<suite name="05 Performance - known defects" verbose="1">
+    <test name="known-defects">
+        <classes>
+            <class name="com.qaportfolio.perf.BottleneckTest"/>
+        </classes>
+    </test>
+</suite>

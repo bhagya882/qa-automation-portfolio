@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PR-safe regression suite. Parallel per method, 4 threads (one browser per thread via qa-core DriverManager).
+     Known product defects are in group "known-defect": excluded in CI with -DexcludedGroups=known-defect,
+     run on their own with: -Dsuite=testng-known-defects.xml -->
+<suite name="04 E2E - SauceDemo regression" parallel="methods" thread-count="4" data-provider-thread-count="4">
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="SauceDemo regression">
+        <packages>
+            <package name="com.qaportfolio.saucedemo.tests"/>
+        </packages>
+    </test>
+</suite>

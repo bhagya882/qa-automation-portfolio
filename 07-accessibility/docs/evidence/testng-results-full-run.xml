@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="30" passed="18" failed="12" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-23T00:15:19 IST" name="07-accessibility" finished-at="2026-11-23T00:17:09 IST" duration-ms="110276">
+    <groups>
+      <group name="known-defect">
+        <method signature="AxeWorkflowScanTest.zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" name="zeroViolations" class="com.qaportfolio.a11y.tests.AxeWorkflowScanTest"/>
+        <method signature="KeyboardNavigationTest.focusKeptAfterAddToCart()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" name="focusKeptAfterAddToCart" class="com.qaportfolio.a11y.tests.KeyboardNavigationTest"/>
+        <method signature="KeyboardNavigationTest.inventoryFocusIndicatorVisible()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" name="inventoryFocusIndicatorVisible" class="com.qaportfolio.a11y.tests.KeyboardNavigationTest"/>
+        <method signature="KeyboardNavigationTest.loginFocusIndicatorVisible()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" name="loginFocusIndicatorVisible" class="com.qaportfolio.a11y.tests.KeyboardNavigationTest"/>
+        <method signature="SemanticStructureTest.formFieldsHaveVisibleLabels()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" name="formFieldsHaveVisibleLabels" class="com.qaportfolio.a11y.tests.SemanticStructureTest"/>
+        <method signature="SemanticStructureTest.pageTitlesAreDescriptive()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" name="pageTitlesAreDescriptive" class="com.qaportfolio.a11y.tests.SemanticStructureTest"/>
+      </group> <!-- known-defect -->
+    </groups>
+    <test started-at="2026-11-23T00:15:19 IST" name="axe-scans-and-keyboard" finished-at="2026-11-23T00:17:09 IST" duration-ms="110276">
+      <class name="com.qaportfolio.a11y.tests.SemanticStructureTest">
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:41 IST" name="startBrowser" finished-at="2026-11-23T00:16:43 IST" duration-ms="2539" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="formFieldsHaveVisibleLabels()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:43 IST" name="formFieldsHaveVisibleLabels" description="A11Y-SEM-05 Form fields have a persistent visible &lt;label&gt; (not placeholder only)" finished-at="2026-11-23T00:16:46 IST" duration-ms="2172" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[inputs relying on placeholder only] 
+Expecting empty but was: ["login#user-name",
+    "login#password",
+    "checkout-step-one#first-name",
+    "checkout-step-one#last-name",
+    "checkout-step-one#postal-code"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [inputs relying on placeholder only] 
+Expecting empty but was: ["login#user-name",
+    "login#password",
+    "checkout-step-one#first-name",
+    "checkout-step-one#last-name",
+    "checkout-step-one#postal-code"]
+at com.qaportfolio.a11y.tests.SemanticStructureTest.formFieldsHaveVisibleLabels(SemanticStructureTest.java:77)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- formFieldsHaveVisibleLabels -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:46 IST" name="stopBrowser" finished-at="2026-11-23T00:16:46 IST" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:46 IST" name="startBrowser" finished-at="2026-11-23T00:16:47 IST" duration-ms="763" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="htmlLangPresent()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:47 IST" name="htmlLangPresent" description="A11Y-SEM-01 &lt;html&gt; declares a valid lang attribute" finished-at="2026-11-23T00:16:49 IST" duration-ms="2073" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlLangPresent -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:49 IST" name="stopBrowser" finished-at="2026-11-23T00:16:49 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:49 IST" name="startBrowser" finished-at="2026-11-23T00:16:50 IST" duration-ms="1481" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="interactiveElementsNamed()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:50 IST" name="interactiveElementsNamed" description="A11Y-SEM-07 Buttons and links have accessible names" finished-at="2026-11-23T00:16:53 IST" duration-ms="2866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- interactiveElementsNamed -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:53 IST" name="stopBrowser" finished-at="2026-11-23T00:16:53 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:53 IST" name="startBrowser" finished-at="2026-11-23T00:16:54 IST" duration-ms="831" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="loginInputsHaveAccessibleName()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:54 IST" name="loginInputsHaveAccessibleName" description="A11Y-SEM-04 Login inputs expose an accessible name" finished-at="2026-11-23T00:16:55 IST" duration-ms="1267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInputsHaveAccessibleName -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:55 IST" name="stopBrowser" finished-at="2026-11-23T00:16:56 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:56 IST" name="startBrowser" finished-at="2026-11-23T00:16:56 IST" duration-ms="846" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="pageTitlesAreDescriptive()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:16:56 IST" name="pageTitlesAreDescriptive" description="A11Y-SEM-03 Page titles are unique and describe each page&#039;s purpose" finished-at="2026-11-23T00:17:00 IST" duration-ms="3140" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[distinct titles across pages {LOGIN=Swag Labs, INVENTORY=Swag Labs, CART=Swag Labs, CHECKOUT_STEP_ONE=Swag Labs}] 
+expected: 4L
+ but was: 1L]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [distinct titles across pages {LOGIN=Swag Labs, INVENTORY=Swag Labs, CART=Swag Labs, CHECKOUT_STEP_ONE=Swag Labs}] 
+expected: 4L
+ but was: 1L
+at com.qaportfolio.a11y.tests.SemanticStructureTest.pageTitlesAreDescriptive(SemanticStructureTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pageTitlesAreDescriptive -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:00 IST" name="stopBrowser" finished-at="2026-11-23T00:17:00 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:00 IST" name="startBrowser" finished-at="2026-11-23T00:17:01 IST" duration-ms="844" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="pagesHaveTitle()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:01 IST" name="pagesHaveTitle" description="A11Y-SEM-02 Every page has a non-empty &lt;title&gt;" finished-at="2026-11-23T00:17:03 IST" duration-ms="1956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pagesHaveTitle -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:03 IST" name="stopBrowser" finished-at="2026-11-23T00:17:03 IST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:03 IST" name="startBrowser" finished-at="2026-11-23T00:17:04 IST" duration-ms="745" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="productImagesHaveAltText()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:04 IST" name="productImagesHaveAltText" description="A11Y-SEM-06 Product images have non-empty alt text matching the product" finished-at="2026-11-23T00:17:06 IST" duration-ms="1986" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productImagesHaveAltText -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:06 IST" name="stopBrowser" finished-at="2026-11-23T00:17:06 IST" duration-ms="437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:06 IST" name="startBrowser" finished-at="2026-11-23T00:17:07 IST" duration-ms="1055" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="reflowAt320px()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:07 IST" name="reflowAt320px" description="A11Y-SEM-08 Content reflows at 320 CSS px without horizontal scrolling" finished-at="2026-11-23T00:17:09 IST" duration-ms="2306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reflowAt320px -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.SemanticStructureTest@7a799159]" started-at="2026-11-23T00:17:09 IST" name="stopBrowser" finished-at="2026-11-23T00:17:09 IST" duration-ms="169" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+      </class> <!-- com.qaportfolio.a11y.tests.SemanticStructureTest -->
+      <class name="com.qaportfolio.a11y.tests.AxeWorkflowScanTest">
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:19 IST" name="startBrowser" finished-at="2026-11-23T00:15:21 IST" duration-ms="1430" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:21 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:25 IST" duration-ms="3909" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LOGIN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:25 IST" name="stopBrowser" finished-at="2026-11-23T00:15:25 IST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:25 IST" name="startBrowser" finished-at="2026-11-23T00:15:25 IST" duration-ms="673" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:25 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:30 IST" duration-ms="4083" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[INVENTORY]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:30 IST" name="stopBrowser" finished-at="2026-11-23T00:15:30 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:30 IST" name="startBrowser" finished-at="2026-11-23T00:15:30 IST" duration-ms="692" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:30 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:33 IST" duration-ms="2138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PRODUCT_DETAILS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:33 IST" name="stopBrowser" finished-at="2026-11-23T00:15:33 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:33 IST" name="startBrowser" finished-at="2026-11-23T00:15:34 IST" duration-ms="845" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:34 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:38 IST" duration-ms="4460" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CART]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:38 IST" name="stopBrowser" finished-at="2026-11-23T00:15:38 IST" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:38 IST" name="startBrowser" finished-at="2026-11-23T00:15:39 IST" duration-ms="784" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:39 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:43 IST" duration-ms="4477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_STEP_ONE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:43 IST" name="stopBrowser" finished-at="2026-11-23T00:15:44 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:44 IST" name="startBrowser" finished-at="2026-11-23T00:15:44 IST" duration-ms="716" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:44 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:48 IST" duration-ms="3373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_STEP_TWO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:48 IST" name="stopBrowser" finished-at="2026-11-23T00:15:48 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:48 IST" name="startBrowser" finished-at="2026-11-23T00:15:49 IST" duration-ms="745" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="noNewViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:49 IST" name="noNewViolations" description="No new axe violations compared with the accepted baseline" data-provider="pages" finished-at="2026-11-23T00:15:56 IST" duration-ms="7295" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_COMPLETE]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noNewViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:56 IST" name="stopBrowser" finished-at="2026-11-23T00:15:56 IST" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:56 IST" name="startBrowser" finished-at="2026-11-23T00:15:57 IST" duration-ms="770" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:57 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:15:57 IST" duration-ms="19" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LOGIN]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on LOGIN: page-has-heading-one[moderate] x1 e.g. [html]; region[moderate] x1 e.g. [.login_logo]] 
+Expecting empty but was: [Violation[page=LOGIN, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]],
+    Violation[page=LOGIN, rule=region, impact=moderate, help=All page content should be contained by landmarks, helpUrl=https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[.login_logo], html=<div class="login_logo">Swag Labs</div>, failureSummary=Fix any of the following:
+  Some page content is not contained by landmarks]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on LOGIN: page-has-heading-one[moderate] x1 e.g. [html]; region[moderate] x1 e.g. [.login_logo]] 
+Expecting empty but was: [Violation[page=LOGIN, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]],
+    Violation[page=LOGIN, rule=region, impact=moderate, help=All page content should be contained by landmarks, helpUrl=https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[.login_logo], html=<div class="login_logo">Swag Labs</div>, failureSummary=Fix any of the following:
+  Some page content is not contained by landmarks]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:57 IST" name="stopBrowser" finished-at="2026-11-23T00:15:57 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:57 IST" name="startBrowser" finished-at="2026-11-23T00:15:58 IST" duration-ms="664" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:58 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:15:58 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[INVENTORY]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on INVENTORY: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=INVENTORY, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on INVENTORY: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=INVENTORY, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:58 IST" name="stopBrowser" finished-at="2026-11-23T00:15:58 IST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:58 IST" name="startBrowser" finished-at="2026-11-23T00:15:59 IST" duration-ms="802" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:59 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:15:59 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PRODUCT_DETAILS]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on PRODUCT_DETAILS: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=PRODUCT_DETAILS, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on PRODUCT_DETAILS: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=PRODUCT_DETAILS, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:59 IST" name="stopBrowser" finished-at="2026-11-23T00:15:59 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:15:59 IST" name="startBrowser" finished-at="2026-11-23T00:16:00 IST" duration-ms="704" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:00 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:16:00 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CART]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on CART: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CART, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on CART: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CART, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:00 IST" name="stopBrowser" finished-at="2026-11-23T00:16:00 IST" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:00 IST" name="startBrowser" finished-at="2026-11-23T00:16:01 IST" duration-ms="757" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:01 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:16:01 IST" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_STEP_ONE]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on CHECKOUT_STEP_ONE: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_STEP_ONE, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on CHECKOUT_STEP_ONE: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_STEP_ONE, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:01 IST" name="stopBrowser" finished-at="2026-11-23T00:16:01 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:01 IST" name="startBrowser" finished-at="2026-11-23T00:16:01 IST" duration-ms="650" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:01 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:16:01 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_STEP_TWO]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on CHECKOUT_STEP_TWO: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_STEP_TWO, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on CHECKOUT_STEP_TWO: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_STEP_TWO, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:01 IST" name="stopBrowser" finished-at="2026-11-23T00:16:02 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:02 IST" name="startBrowser" finished-at="2026-11-23T00:16:02 IST" duration-ms="784" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="zeroViolations(com.qaportfolio.a11y.support.SauceDemo$Page)[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:02 IST" name="zeroViolations" description="Target state: page has zero axe violations (fails while baseline defects are open)" data-provider="pages" finished-at="2026-11-23T00:16:02 IST" duration-ms="7" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECKOUT_COMPLETE]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[axe violations on CHECKOUT_COMPLETE: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_COMPLETE, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [axe violations on CHECKOUT_COMPLETE: page-has-heading-one[moderate] x1 e.g. [html]] 
+Expecting empty but was: [Violation[page=CHECKOUT_COMPLETE, rule=page-has-heading-one, impact=moderate, help=Page should contain a level-one heading, helpUrl=https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=axeAPI, wcagTags=[best-practice], nodes=[NodeInfo[target=[html], html=<html lang="en">, failureSummary=Fix all of the following:
+  Page must have a level-one heading]]]]
+at com.qaportfolio.a11y.tests.AxeWorkflowScanTest.zeroViolations(AxeWorkflowScanTest.java:51)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zeroViolations -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:02 IST" name="stopBrowser" finished-at="2026-11-23T00:16:03 IST" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="writeReport()[pri:0, instance:com.qaportfolio.a11y.tests.AxeWorkflowScanTest@78411116]" started-at="2026-11-23T00:16:03 IST" name="writeReport" finished-at="2026-11-23T00:16:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeReport -->
+      </class> <!-- com.qaportfolio.a11y.tests.AxeWorkflowScanTest -->
+      <class name="com.qaportfolio.a11y.tests.KeyboardNavigationTest">
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:03 IST" name="startBrowser" finished-at="2026-11-23T00:16:03 IST" duration-ms="788" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="addToCartWithKeyboardOnly()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:03 IST" name="addToCartWithKeyboardOnly" description="A11Y-KB-03 Add to cart is reachable and operable with keyboard only" finished-at="2026-11-23T00:16:06 IST" duration-ms="2680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addToCartWithKeyboardOnly -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:06 IST" name="stopBrowser" finished-at="2026-11-23T00:16:06 IST" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:06 IST" name="startBrowser" finished-at="2026-11-23T00:16:07 IST" duration-ms="712" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="burgerMenuClosesWithEscape()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:07 IST" name="burgerMenuClosesWithEscape" description="A11Y-KB-05 Escape closes the open burger menu (expected dialog/menu behaviour)" finished-at="2026-11-23T00:16:11 IST" duration-ms="3818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- burgerMenuClosesWithEscape -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:11 IST" name="stopBrowser" finished-at="2026-11-23T00:16:11 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:11 IST" name="startBrowser" finished-at="2026-11-23T00:16:12 IST" duration-ms="1303" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="burgerMenuKeyboard()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:12 IST" name="burgerMenuKeyboard" description="A11Y-KB-04 Burger menu opens with Enter, moves focus into the menu, closes and is not a trap" finished-at="2026-11-23T00:16:17 IST" duration-ms="4594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- burgerMenuKeyboard -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:17 IST" name="stopBrowser" finished-at="2026-11-23T00:16:17 IST" duration-ms="441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:17 IST" name="startBrowser" finished-at="2026-11-23T00:16:23 IST" duration-ms="5196" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="focusKeptAfterAddToCart()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:23 IST" name="focusKeptAfterAddToCart" description="A11Y-KB-03b Focus is kept on the Add/Remove toggle after activating it" finished-at="2026-11-23T00:16:25 IST" duration-ms="1985" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[focus should stay on the toggled control (now 'Remove') instead of being reset to <body>] 
+expected: "remove-sauce-labs-backpack"
+ but was: "body"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [focus should stay on the toggled control (now 'Remove') instead of being reset to <body>] 
+expected: "remove-sauce-labs-backpack"
+ but was: "body"
+at com.qaportfolio.a11y.tests.KeyboardNavigationTest.focusKeptAfterAddToCart(KeyboardNavigationTest.java:84)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- focusKeptAfterAddToCart -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:25 IST" name="stopBrowser" finished-at="2026-11-23T00:16:25 IST" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:25 IST" name="startBrowser" finished-at="2026-11-23T00:16:25 IST" duration-ms="752" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="inventoryFocusIndicatorVisible()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:25 IST" name="inventoryFocusIndicatorVisible" description="A11Y-KB-07 Inventory controls show a visible focus indicator" finished-at="2026-11-23T00:16:28 IST" duration-ms="2888" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[focused elements without a visible indicator] 
+Expecting empty but was: ["BUTTON#react-burger-menu-btn {boxShadow=none, focusVisible=true, id=react-burger-menu-btn, outlineColor=rgb(0, 0, 0), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "SELECT# {boxShadow=none, focusVisible=true, id=, outlineColor=rgb(0, 0, 0), outlineStyle=none, outlineWidth=3px, tag=SELECT}",
+    "A#item_4_img_link {boxShadow=none, focusVisible=true, id=item_4_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_4_title_link {boxShadow=none, focusVisible=true, id=item_4_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-backpack {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-backpack, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_0_img_link {boxShadow=none, focusVisible=true, id=item_0_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_0_title_link {boxShadow=none, focusVisible=true, id=item_0_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-bike-light {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-bike-light, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_1_img_link {boxShadow=none, focusVisible=true, id=item_1_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_1_title_link {boxShadow=none, focusVisible=true, id=item_1_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-bolt-t-shirt {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-bolt-t-shirt, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_5_img_link {boxShadow=none, focusVisible=true, id=item_5_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [focused elements without a visible indicator] 
+Expecting empty but was: ["BUTTON#react-burger-menu-btn {boxShadow=none, focusVisible=true, id=react-burger-menu-btn, outlineColor=rgb(0, 0, 0), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "SELECT# {boxShadow=none, focusVisible=true, id=, outlineColor=rgb(0, 0, 0), outlineStyle=none, outlineWidth=3px, tag=SELECT}",
+    "A#item_4_img_link {boxShadow=none, focusVisible=true, id=item_4_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_4_title_link {boxShadow=none, focusVisible=true, id=item_4_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-backpack {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-backpack, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_0_img_link {boxShadow=none, focusVisible=true, id=item_0_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_0_title_link {boxShadow=none, focusVisible=true, id=item_0_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-bike-light {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-bike-light, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_1_img_link {boxShadow=none, focusVisible=true, id=item_1_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "A#item_1_title_link {boxShadow=none, focusVisible=true, id=item_1_title_link, outlineColor=rgb(74, 74, 74), outlineStyle=none, outlineWidth=3px, tag=A}",
+    "BUTTON#add-to-cart-sauce-labs-bolt-t-shirt {boxShadow=none, focusVisible=true, id=add-to-cart-sauce-labs-bolt-t-shirt, outlineColor=rgb(19, 35, 34), outlineStyle=none, outlineWidth=3px, tag=BUTTON}",
+    "A#item_5_img_link {boxShadow=none, focusVisible=true, id=item_5_img_link, outlineColor=rgb(0, 0, 238), outlineStyle=none, outlineWidth=3px, tag=A}"]
+at com.qaportfolio.a11y.tests.KeyboardNavigationTest.inventoryFocusIndicatorVisible(KeyboardNavigationTest.java:169)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inventoryFocusIndicatorVisible -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:28 IST" name="stopBrowser" finished-at="2026-11-23T00:16:29 IST" duration-ms="295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:29 IST" name="startBrowser" finished-at="2026-11-23T00:16:30 IST" duration-ms="1071" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="loginFocusIndicatorVisible()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:30 IST" name="loginFocusIndicatorVisible" description="A11Y-KB-06 Login controls show a visible focus indicator" finished-at="2026-11-23T00:16:32 IST" duration-ms="2030" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[visible focus indicator on #user-name, computed {boxShadow=none, focusVisible=true, id=user-name, outlineColor=rgb(72, 76, 85), outlineStyle=none, outlineWidth=3px, tag=INPUT}] 
+Expecting value to be true but was false]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [visible focus indicator on #user-name, computed {boxShadow=none, focusVisible=true, id=user-name, outlineColor=rgb(72, 76, 85), outlineStyle=none, outlineWidth=3px, tag=INPUT}] 
+Expecting value to be true but was false
+at com.qaportfolio.a11y.tests.KeyboardNavigationTest.loginFocusIndicatorVisible(KeyboardNavigationTest.java:149)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFocusIndicatorVisible -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:32 IST" name="stopBrowser" finished-at="2026-11-23T00:16:32 IST" duration-ms="258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:32 IST" name="startBrowser" finished-at="2026-11-23T00:16:33 IST" duration-ms="1128" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="loginFormTabOrder()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:33 IST" name="loginFormTabOrder" description="A11Y-KB-01 Tab order on login is username → password → login button" finished-at="2026-11-23T00:16:36 IST" duration-ms="2358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFormTabOrder -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:36 IST" name="stopBrowser" finished-at="2026-11-23T00:16:36 IST" duration-ms="342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+        <test-method is-config="true" signature="startBrowser(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:36 IST" name="startBrowser" finished-at="2026-11-23T00:16:37 IST" duration-ms="1110" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="loginWithKeyboardOnly()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:37 IST" name="loginWithKeyboardOnly" description="A11Y-KB-02 Login can be completed with keyboard only (Enter submits)" finished-at="2026-11-23T00:16:41 IST" duration-ms="3584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithKeyboardOnly -->
+        <test-method is-config="true" signature="stopBrowser()[pri:0, instance:com.qaportfolio.a11y.tests.KeyboardNavigationTest@160396db]" started-at="2026-11-23T00:16:41 IST" name="stopBrowser" finished-at="2026-11-23T00:16:41 IST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopBrowser -->
+      </class> <!-- com.qaportfolio.a11y.tests.KeyboardNavigationTest -->
+    </test> <!-- axe-scans-and-keyboard -->
+  </suite> <!-- 07-accessibility -->
+</testng-results>

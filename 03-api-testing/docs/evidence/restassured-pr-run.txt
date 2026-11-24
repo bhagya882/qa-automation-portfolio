@@ -1,0 +1,4 @@
+
+PR-mode run - 2026-11-22T18:47Z
+Command: ./mvnw -pl 03-api-testing test -DexcludedGroups=known-defect -Dretry.count=1
+<testng-results ignored="12" total="65" passed="53" failed="0" skipped="0">

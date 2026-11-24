@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Default suite. Runs every API test, including group "known-defect" (tests that reproduce real DummyJSON defects
+  and therefore FAIL). PR CI excludes them with -DexcludedGroups=known-defect.
+  Parallel by class with a small pool to stay well below DummyJSON's 100 requests / window rate limit.
+-->
+<suite name="03-api-regression" parallel="classes" thread-count="3">
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="DummyJSON REST API">
+        <packages>
+            <package name="com.qaportfolio.api.tests"/>
+        </packages>
+    </test>
+</suite>

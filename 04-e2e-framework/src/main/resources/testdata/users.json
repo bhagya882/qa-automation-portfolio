@@ -1,0 +1,12 @@
+{
+  "_comment": "Public demo accounts printed on the SauceDemo login page. They are not secrets and protect nothing.",
+  "password": "secret_sauce",
+  "users": [
+    {"key": "standard",          "username": "standard_user",           "canLogin": true,  "notes": "Happy path user"},
+    {"key": "locked_out",        "username": "locked_out_user",         "canLogin": false, "expectedError": "Epic sadface: Sorry, this user has been locked out.", "notes": "Account is locked"},
+    {"key": "problem",           "username": "problem_user",            "canLogin": true,  "notes": "Seeded functional defects (images, sort, form fields)"},
+    {"key": "performance_glitch","username": "performance_glitch_user", "canLogin": true,  "notes": "Slow login"},
+    {"key": "error",             "username": "error_user",              "canLogin": true,  "notes": "Seeded errors on cart/checkout"},
+    {"key": "visual",            "username": "visual_user",             "canLogin": true,  "notes": "Seeded visual/layout defects"}
+  ]
+}

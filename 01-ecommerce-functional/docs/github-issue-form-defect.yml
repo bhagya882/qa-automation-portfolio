@@ -1,0 +1,56 @@
+name: Defect report
+description: Report a defect found during testing
+title: "DEF-XX-NNN: <component>: <what is wrong>"
+labels: ["defect"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: [Blocker, Critical, Major, Minor, Trivial]
+    validations: { required: true }
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: [P1, P2, P3, P4]
+    validations: { required: true }
+  - type: input
+    id: testcase
+    attributes:
+      label: Linked test case(s)
+      placeholder: TC-CO-07
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: URL/build, browser + version, OS/device, test account (public demo or synthetic only)
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, console logs, response bodies. Redact tokens/cookies. Never paste real credentials.
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options: [Always, Intermittent, Once]

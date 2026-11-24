@@ -1,0 +1,2 @@
+com.example.CheckoutTest#placeOrder retry=1 cause=org.openqa.selenium.TimeoutException: Expected condition failed
+com.example.SearchTest#suggestions retry=1 cause=java.lang.AssertionError

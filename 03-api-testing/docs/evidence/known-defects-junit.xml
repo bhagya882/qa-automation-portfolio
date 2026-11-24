@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DemoShop API Regression (DummyJSON)" tests="8" time="4.773">
+  <testsuite name="Known defects / Login - valid credentials" id="92de89ca-7ff3-40f0-a2db-d609d211a42a" timestamp="2026-11-22T18:45:00.271Z" tests="6" failures="0" errors="0" time="0.556">
+    <testcase name="Response time below 3000 ms" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+    <testcase name="Content-Type is JSON" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+    <testcase name="Status is 200" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+    <testcase name="Login response matches JSON schema" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+    <testcase name="Access token is a JWT" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+    <testcase name="Username echoes request" time="0.556" classname="KnownDefectsLoginValidCredentials"/>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-001 Wrong password should be 401" id="e949fae7-dcef-4127-b587-385c9c2030c3" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="1" errors="0" time="0.633">
+    <testcase name="Response time below 3000 ms" time="0.633" classname="KnownDefectsDefApi001WrongPasswordShouldBe401"/>
+    <testcase name="Content-Type is JSON" time="0.633" classname="KnownDefectsDefApi001WrongPasswordShouldBe401"/>
+    <testcase name="Status is 401" time="0.633" classname="KnownDefectsDefApi001WrongPasswordShouldBe401">
+      <failure type="AssertionFailure" message="expected response to have status code 401 but got 400">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-001 Wrong password should be 401.]]>
+        <![CDATA[Test description: Status is 401.]]>
+        <![CDATA[Error message: expected response to have status code 401 but got 400.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 401 but got 400
+   at Object.eval sandbox-script.js:1:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-002 /auth/me must not expose password/ssn" id="e8e9487d-8fdb-4a3f-8edc-299e03102883" timestamp="2026-11-22T18:45:00.271Z" tests="4" failures="2" errors="0" time="0.401">
+    <testcase name="Response time below 3000 ms" time="0.401" classname="KnownDefectsDefApi002AuthMeMustNotExposePasswordSsn"/>
+    <testcase name="Content-Type is JSON" time="0.401" classname="KnownDefectsDefApi002AuthMeMustNotExposePasswordSsn"/>
+    <testcase name="No password field" time="0.401" classname="KnownDefectsDefApi002AuthMeMustNotExposePasswordSsn">
+      <failure type="AssertionFailure" message="expected { id: 1, firstName: 'Emily', …(26) } to not have property 'password'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-002 /auth/me must not expose password/ssn.]]>
+        <![CDATA[Test description: No password field.]]>
+        <![CDATA[Error message: expected { id: 1, firstName: 'Emily', …(26) } to not have property 'password'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { id: 1, firstName: 'Emily', …(26) } to not have property 'password'
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="No ssn field" time="0.401" classname="KnownDefectsDefApi002AuthMeMustNotExposePasswordSsn">
+      <failure type="AssertionFailure" message="expected { id: 1, firstName: 'Emily', …(26) } to not have property 'ssn'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-002 /auth/me must not expose password/ssn.]]>
+        <![CDATA[Test description: No ssn field.]]>
+        <![CDATA[Error message: expected { id: 1, firstName: 'Emily', …(26) } to not have property 'ssn'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { id: 1, firstName: 'Emily', …(26) } to not have property 'ssn'
+   at Object.eval sandbox-script.js:2:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-003 Empty product body should be 400" id="9618e867-4788-4b41-8a68-43c553c673a5" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="1" errors="0" time="1.371">
+    <testcase name="Response time below 3000 ms" time="1.371" classname="KnownDefectsDefApi003EmptyProductBodyShouldBe400"/>
+    <testcase name="Content-Type is JSON" time="1.371" classname="KnownDefectsDefApi003EmptyProductBodyShouldBe400"/>
+    <testcase name="Status is 400" time="1.371" classname="KnownDefectsDefApi003EmptyProductBodyShouldBe400">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-003 Empty product body should be 400.]]>
+        <![CDATA[Test description: Status is 400.]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 201
+   at Object.eval sandbox-script.js:1:4).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-004 Negative price should be 400" id="ebb2d634-bd15-41a8-aa77-5396f6af1a4e" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="1" errors="0" time="0.340">
+    <testcase name="Response time below 3000 ms" time="0.340" classname="KnownDefectsDefApi004NegativePriceShouldBe400"/>
+    <testcase name="Content-Type is JSON" time="0.340" classname="KnownDefectsDefApi004NegativePriceShouldBe400"/>
+    <testcase name="Status is 400" time="0.340" classname="KnownDefectsDefApi004NegativePriceShouldBe400">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-004 Negative price should be 400.]]>
+        <![CDATA[Test description: Status is 400.]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 201
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-005 Negative cart quantity should be 400" id="79e4b1d2-29a4-4050-b868-4443810f72ce" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="1" errors="0" time="0.398">
+    <testcase name="Response time below 3000 ms" time="0.398" classname="KnownDefectsDefApi005NegativeCartQuantityShouldBe400"/>
+    <testcase name="Content-Type is JSON" time="0.398" classname="KnownDefectsDefApi005NegativeCartQuantityShouldBe400"/>
+    <testcase name="Status is 400" time="0.398" classname="KnownDefectsDefApi005NegativeCartQuantityShouldBe400">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 201">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-005 Negative cart quantity should be 400.]]>
+        <![CDATA[Test description: Status is 400.]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 201.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 201
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-006 Unsupported method should be 405 JSON" id="914e4f8d-20c4-41ed-8b54-9503e68ba780" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="2" errors="0" time="0.714">
+    <testcase name="Response time below 3000 ms" time="0.714" classname="KnownDefectsDefApi006UnsupportedMethodShouldBe405Json"/>
+    <testcase name="Status is 405" time="0.714" classname="KnownDefectsDefApi006UnsupportedMethodShouldBe405Json">
+      <failure type="AssertionFailure" message="expected response to have status code 405 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-006 Unsupported method should be 405 JSON.]]>
+        <![CDATA[Test description: Status is 405.]]>
+        <![CDATA[Error message: expected response to have status code 405 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 405 but got 404
+   at Object.eval sandbox-script.js:1:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="JSON error body" time="0.714" classname="KnownDefectsDefApi006UnsupportedMethodShouldBe405Json">
+      <failure type="AssertionFailure" message="expected response body to be a valid json but got error Unexpected token '&lt;' at 1:1">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-006 Unsupported method should be 405 JSON.]]>
+        <![CDATA[Test description: JSON error body.]]>
+        <![CDATA[Error message: expected response body to be a valid json but got error Unexpected token '<' at 1:1.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response body to be a valid json but got error Unexpected token '<' at 1:1
+   at Object.eval sandbox-script.js:2:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Known defects / DEF-API-010 Forged JWT should be 401 not 500" id="76b2f55f-cc4b-4dd1-96f2-50d6407c9868" timestamp="2026-11-22T18:45:00.271Z" tests="3" failures="1" errors="0" time="0.360">
+    <testcase name="Response time below 3000 ms" time="0.360" classname="KnownDefectsDefApi010ForgedJwtShouldBe401Not500"/>
+    <testcase name="Content-Type is JSON" time="0.360" classname="KnownDefectsDefApi010ForgedJwtShouldBe401Not500"/>
+    <testcase name="Status is 401" time="0.360" classname="KnownDefectsDefApi010ForgedJwtShouldBe401Not500">
+      <failure type="AssertionFailure" message="expected response to have status code 401 but got 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 91e5062e-f611-5cab-a30f-3e58b6c08b30.]]>
+        <![CDATA[Collection name: DemoShop API Regression (DummyJSON).]]>
+        <![CDATA[Request name: Known defects / DEF-API-010 Forged JWT should be 401 not 500.]]>
+        <![CDATA[Test description: Status is 401.]]>
+        <![CDATA[Error message: expected response to have status code 401 but got 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 401 but got 500
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

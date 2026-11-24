@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.qaportfolio</groupId>
+        <artifactId>qa-automation-portfolio</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>10-quality-gate</artifactId>
+    <name>10 - Continuous Quality Gate and Test Reporting</name>
+    <description>Aggregates TestNG + Newman results from all modules and fails the build on threshold breaches</description>
+
+    <!-- No runtime dependencies on purpose: the gate runs with plain `java -jar` on any CI runner. -->
+    <dependencies>
+        <dependency>
+            <!-- test scope only: RetryTransformer listener registered in testng.xml -->
+            <groupId>com.qaportfolio</groupId>
+            <artifactId>qa-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.qaportfolio.gate.QualityGate</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.qaportfolio.gate.QualityGate</mainClass>
+                    <!-- Run from the repository root by default -->
+                    <arguments>
+                        <argument>--root</argument>
+                        <argument>${maven.multiModuleProjectDirectory}</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

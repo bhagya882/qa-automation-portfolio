@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Reproduces open defects in the SECURE build (e.g. SEC-007). Expected to FAIL until fixed. -->
+<suite name="06 Security QA - known defects" verbose="1">
+    <parameter name="mode" value="secure"/>
+    <test name="known-defects">
+        <groups>
+            <run>
+                <include name="known-defect"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.qaportfolio.security"/>
+        </packages>
+    </test>
+</suite>

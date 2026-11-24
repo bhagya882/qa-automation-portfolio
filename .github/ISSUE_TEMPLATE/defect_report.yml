@@ -1,0 +1,117 @@
+name: Defect report
+description: Report a reproducible defect found by manual or automated testing
+title: "[DEF] <short summary>"
+labels: ["defect", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One defect per issue. **Never paste real personal data, passwords, tokens or cookies.** Redact them
+        (e.g. `Bearer <redacted>`). Only report findings from systems we own or are authorised to test.
+  - type: input
+    id: defect-id
+    attributes:
+      label: Defect ID
+      description: Project prefix + number, e.g. DEF-API-012, DEF-UI-004
+      placeholder: DEF-XXX-000
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity (impact)
+      options:
+        - "Critical: data loss, security breach, core flow blocked, no workaround"
+        - "Major: core feature broken, workaround exists"
+        - "Minor: non-core feature wrong or degraded"
+        - "Trivial: cosmetic / wording"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (urgency)
+      options:
+        - "P1: fix before next release"
+        - "P2: fix in current sprint"
+        - "P3: schedule"
+        - "P4: backlog"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / project
+      options:
+        - 01 Functional (e-commerce)
+        - 02 Cross-browser / responsive UI
+        - 03 REST API
+        - 04 E2E framework
+        - 05 Performance
+        - 06 Security
+        - 07 Accessibility
+        - 08 Database / migration
+        - 09 Mobile
+        - 10 CI / quality gate
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: URL/build, browser + version, OS, device/viewport, test data used, commit SHA / CI run link
+      placeholder: |
+        - Target: https://www.saucedemo.com (build N/A)
+        - Browser: Chrome 142 headless, 1440x900
+        - OS: Ubuntu 24.04 (GitHub runner) / macOS 26
+        - Test: com.qaportfolio.e2e.tests.CheckoutTest#placeOrder
+        - CI run: <link>
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered, minimal, deterministic. Include exact inputs.
+      placeholder: |
+        1. Log in as standard_user
+        2. Add "Sauce Labs Backpack" to the cart
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, screen recording, logs, HAR, request/response (redacted), Allure link, artifact name
+    validations:
+      required: true
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      options: ["Always", "Intermittent (state % below)", "Once"]
+    validations:
+      required: true
+  - type: input
+    id: automated-test
+    attributes:
+      label: Automated reproduction
+      description: Test that reproduces this defect (tagged group `known-defect` until fixed)
+      placeholder: ClassName#method
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / suspected cause / workaround

@@ -1,0 +1,17 @@
+REST Assured full run (all groups incl. known-defect) - 2026-11-22T18:46Z
+Command: ./mvnw -pl 03-api-testing test -DtestFailureIgnore=true
+<testng-results ignored="0" total="66" passed="53" failed="13" skipped="0">
+Failed (all are group=known-defect):
+  com.qaportfolio.api.tests.ProductWriteTests.addProductRequiresFields
+  com.qaportfolio.api.tests.ProductWriteTests.negativePriceRejected
+  com.qaportfolio.api.tests.ProductWriteTests.nonNumericPriceRejected
+  com.qaportfolio.api.tests.CartTests.cartLineFieldNamesConsistent
+  com.qaportfolio.api.tests.ProductWriteTests.unsupportedMethodShouldBe405Json
+  com.qaportfolio.api.tests.ProductReadTests.nonNumericIdShouldBe400
+  com.qaportfolio.api.tests.CartTests.negativeQuantityRejected
+  com.qaportfolio.api.tests.AuthTests.authCookiesDeclareSameSite
+  com.qaportfolio.api.tests.AuthTests.forgedJwtShouldBe401[eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.invalidsignature](1)
+  com.qaportfolio.api.tests.AuthTests.forgedJwtShouldBe401[a.b.c](2)
+  com.qaportfolio.api.tests.AuthTests.meMustNotExposeSecrets
+  com.qaportfolio.api.tests.ProductReadTests.unknownCategoryShouldBe404
+  com.qaportfolio.api.tests.AuthTests.wrongPasswordShouldReturn401

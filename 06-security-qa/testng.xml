@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PR gate: OWASP Top 10 checks against the SECURE Demo Store (in-process). Must be all green.
+     Open defects (group known-defect, e.g. SEC-007) are excluded here and tracked in docs/security-findings.md. -->
+<suite name="06 Security QA - secure target" verbose="1">
+    <parameter name="mode" value="secure"/>
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="owasp-top10-secure">
+        <groups>
+            <run>
+                <exclude name="known-defect"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.qaportfolio.security"/>
+        </packages>
+    </test>
+</suite>

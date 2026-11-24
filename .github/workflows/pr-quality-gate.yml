@@ -1,0 +1,274 @@
+# Continuous quality gate (Project 10)
+#
+# Every test job runs with -DtestFailureIgnore=true and uploads its results. The final `quality-gate` job
+# aggregates all results and applies the thresholds in 10-quality-gate/quality-gate.properties. That job is the
+# one that passes or fails the pipeline, and it is the required status check in branch protection.
+# On pushes to main the Allure report is published to GitHub Pages (the live test dashboard).
+name: PR quality gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: quality-gate-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  # CI flag also tells qa-core DriverFactory to add --no-sandbox for Chrome
+  CI: "true"
+  MAVEN_ARGS: -B -ntp
+  # PR-safe defaults for every test job
+  TEST_FLAGS: -DtestFailureIgnore=true -Dheadless=true -Dretry.count=1 -DexcludedGroups=known-defect,quarantine
+
+jobs:
+  build:
+    name: Build & compile all modules
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - name: Compile and package (no tests)
+        run: ./mvnw $MAVEN_ARGS -q install -DskipTests
+
+  unit:
+    name: Unit tests (quality-gate tool)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - run: ./mvnw $MAVEN_ARGS -pl 10-quality-gate -am verify $TEST_FLAGS
+      - run: .github/scripts/stage-results.sh 10-quality-gate
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-unit, path: ci-results, retention-days: 14 }
+
+  api:
+    name: API regression (REST Assured + Newman)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: 03-api-testing/package-lock.json
+      - name: REST Assured suite
+        run: ./mvnw $MAVEN_ARGS -pl 03-api-testing -am verify $TEST_FLAGS
+      - name: Newman regression + data-driven
+        working-directory: 03-api-testing
+        run: |
+          npm ci
+          npm test || echo "::warning::Newman reported failures (the quality gate decides)"
+      - run: .github/scripts/stage-results.sh 03-api-testing
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-api, path: ci-results, retention-days: 14 }
+
+  ui:
+    name: UI ${{ matrix.module }} on ${{ matrix.browser }}
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        module: [02-cross-browser-ui, 04-e2e-framework]
+        browser: [chrome, firefox]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      # Chrome and Firefox are preinstalled on ubuntu-latest; Selenium Manager resolves the drivers.
+      - name: Run ${{ matrix.module }} (${{ matrix.browser }}, headless)
+        # Install upstream modules first without tests, so 02's job does not also run 04's tests
+        run: |
+          ./mvnw $MAVEN_ARGS -q -pl ${{ matrix.module }} -am install -DskipTests
+          ./mvnw $MAVEN_ARGS -pl ${{ matrix.module }} verify $TEST_FLAGS -Dbrowser=${{ matrix.browser }}
+      - run: .github/scripts/stage-results.sh ${{ matrix.module }}
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-ui-${{ matrix.module }}-${{ matrix.browser }}
+          path: ci-results
+          retention-days: 14
+
+  a11y:
+    name: Accessibility (axe-core)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - run: ./mvnw $MAVEN_ARGS -pl 07-accessibility -am verify $TEST_FLAGS
+      - run: .github/scripts/stage-results.sh 07-accessibility
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-a11y, path: ci-results, retention-days: 14 }
+
+  db:
+    name: Database integrity & migration (PostgreSQL)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: qa
+          POSTGRES_USER: qa
+          # Throw-away container that exists only for this job: trust auth, so no password is needed or stored
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U qa -d qa"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DB_URL: jdbc:postgresql://localhost:5432/qa
+      DB_USER: qa
+      DB_PASSWORD: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - run: ./mvnw $MAVEN_ARGS -pl 08-db-migration -am verify $TEST_FLAGS
+      - run: .github/scripts/stage-results.sh 08-db-migration
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-db, path: ci-results, retention-days: 14 }
+
+  security:
+    name: Security checks (REST Assured + ZAP baseline)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - name: Security test suite (against the owned sample-app)
+        run: ./mvnw $MAVEN_ARGS -pl 06-security-qa -am verify $TEST_FLAGS
+      - name: Build and start sample-app (secure mode) on :7070
+        run: |
+          ./mvnw $MAVEN_ARGS -q -pl sample-app -am package -DskipTests
+          nohup java -jar sample-app/target/sample-app-1.0.0-all.jar > sample-app.log 2>&1 &
+          curl --silent --fail --retry 30 --retry-delay 1 --retry-connrefused http://localhost:7070/health
+      - name: OWASP ZAP baseline scan (passive)
+        run: bash 06-security-qa/scripts/zap-baseline.sh http://localhost:7070
+      - name: Collect app log
+        if: always()
+        run: mkdir -p 06-security-qa/target && cp sample-app.log 06-security-qa/target/ || true
+      - run: .github/scripts/stage-results.sh 06-security-qa
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-security, path: ci-results, retention-days: 14 }
+
+  perf:
+    name: Performance smoke (JMeter DSL)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - run: ./mvnw $MAVEN_ARGS -pl 05-performance -am verify $TEST_FLAGS -Dperf.profile=smoke
+      - run: .github/scripts/stage-results.sh 05-performance
+        if: always()
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: results-perf, path: ci-results, retention-days: 14 }
+
+  quality-gate:
+    name: Quality gate
+    needs: [unit, api, ui, a11y, db, security, perf]
+    # Evaluate even when a test job crashed: missing results are themselves a gate breach
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21", cache: maven }
+      - name: Build gate tool
+        run: ./mvnw $MAVEN_ARGS -q -pl 10-quality-gate -am package -DskipTests
+      - name: Download all results (one folder per artifact)
+        uses: actions/download-artifact@v4
+        with:
+          pattern: results-*
+          path: results
+      - name: Evaluate thresholds
+        run: >
+          java -jar 10-quality-gate/target/10-quality-gate-1.0.0.jar
+          --root results
+          --config 10-quality-gate/quality-gate.properties
+          --out quality-gate
+      - name: Merge Allure results
+        if: always()
+        run: |
+          mkdir -p allure-results
+          find results -path '*/target/allure-results/*' -type f -exec cp {} allure-results/ \;
+          echo "Allure result files: $(ls allure-results | wc -l)"
+      - uses: actions/setup-node@v4
+        if: always()
+        with: { node-version: "20" }
+      - name: Generate Allure report
+        if: always()
+        run: |
+          npx --yes allure-commandline@2.32.0 generate allure-results -o site --clean
+          mkdir -p site/quality-gate
+          cp quality-gate/summary.* site/quality-gate/ 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-gate-report
+          path: |
+            quality-gate
+            site
+          retention-days: 30
+      - name: Upload Pages artifact
+        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  publish-report:
+    name: Publish test dashboard (GitHub Pages)
+    needs: quality-gate
+    # Publish even when the gate failed, so the dashboard shows why
+    if: ${{ !cancelled() && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

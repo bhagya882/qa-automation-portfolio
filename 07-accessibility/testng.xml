@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="07-accessibility" verbose="1">
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="axe-scans-and-keyboard">
+        <classes>
+            <class name="com.qaportfolio.a11y.tests.AxeWorkflowScanTest"/>
+            <class name="com.qaportfolio.a11y.tests.KeyboardNavigationTest"/>
+            <class name="com.qaportfolio.a11y.tests.SemanticStructureTest"/>
+        </classes>
+    </test>
+</suite>

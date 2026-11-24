@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- False-positive suppressions for OWASP Dependency-Check. Every entry needs a justification, an owner
+     and a review date; suppressions are reviewed at each release (see docs/security-test-plan.md). -->
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!-- Example format (no active suppressions):
+    <suppress until="2027-03-31Z">
+        <notes>Justification, ticket, owner</notes>
+        <packageUrl regex="true">^pkg:maven/org\.example/lib@.*$</packageUrl>
+        <cve>CVE-0000-00000</cve>
+    </suppress>
+    -->
+</suppressions>

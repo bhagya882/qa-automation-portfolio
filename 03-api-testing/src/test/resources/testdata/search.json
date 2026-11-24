@@ -1,0 +1,6 @@
+[
+  {"query": "phone", "expectAtLeast": 1},
+  {"query": "laptop", "expectAtLeast": 1},
+  {"query": "mascara", "expectAtLeast": 1},
+  {"query": "zzzz-no-such-product", "expectAtLeast": 0}
+]

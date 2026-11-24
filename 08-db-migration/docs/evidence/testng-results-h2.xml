@@ -1,0 +1,1229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="64" passed="64" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-23T00:28:53 IST" name="08-db-migration" finished-at="2026-11-23T00:28:54 IST" duration-ms="1280">
+    <groups>
+    </groups>
+    <test started-at="2026-11-23T00:28:53 IST" name="migration-validation" finished-at="2026-11-23T00:28:54 IST" duration-ms="1280">
+      <class name="com.qaportfolio.db.tests.SchemaValidationTest">
+        <test-method is-config="true" signature="migrate()[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:53 IST" name="migrate" finished-at="2026-11-23T00:28:54 IST" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migrate -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="80" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[id]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[integer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[email]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[email_normalized]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[created_at]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[timestamp]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[phone]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[products]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[price]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[numeric]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[products]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sku]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[orders]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[customer_id]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[integer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[orders]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[order_date]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[timestamp]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[orders]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[total]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[numeric]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[orders]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[status]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[order_items]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[quantity]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[integer]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[order_items]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[unit_price]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[numeric]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="columnDataType(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="columnDataType" description="DB-01 Column has the expected type, precision and nullability" data-provider="expectedColumns" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[migration_rejects]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[reason]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[character varying]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+            <param index="4">
+              <value is-null="true"/>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[NO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnDataType -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NOT NULL email]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO customers (id, email, email_normalized, full_name, created_at) VALUES (9001, NULL, 'x@example.test', 'X', CURRENT_TIMESTAMP)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UNIQUE email (case-insensitive)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO customers (id, email, email_normalized, full_name, created_at) SELECT 9002, UPPER(email), email_normalized, 'Dup', CURRENT_TIMESTAMP FROM customers WHERE id = 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK email_normalized = lower(email)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO customers (id, email, email_normalized, full_name, created_at) VALUES (9003, 'Mixed@Example.test', 'Mixed@Example.test', 'X', CURRENT_TIMESTAMP)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK email format]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO customers (id, email, email_normalized, full_name, created_at) VALUES (9004, 'not-an-email', 'not-an-email', 'X', CURRENT_TIMESTAMP)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK price >= 0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO products (id, sku, name, price) VALUES (9005, 'SKU-9005', 'Neg', -0.01)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UNIQUE sku]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO products (id, sku, name, price) SELECT 9006, sku, 'Dup', 1 FROM products WHERE id = 1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NUMERIC(10,2) overflow]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO products (id, sku, name, price) VALUES (9007, 'SKU-9007', 'Big', 123456789.99)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FK order -> customer]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO orders (id, customer_id, order_date, status, total) VALUES (9008, 999999, CURRENT_TIMESTAMP, 'NEW', 1)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK status domain]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO orders (id, customer_id, order_date, status, total) VALUES (9009, 1, CURRENT_TIMESTAMP, 'paid', 1)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK total >= 0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO orders (id, customer_id, order_date, status, total) VALUES (9010, 1, CURRENT_TIMESTAMP, 'NEW', -5)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHECK quantity > 0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO order_items (id, order_id, product_id, quantity, unit_price) SELECT 9011, MIN(id), 1, 0, 1 FROM orders]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FK item -> order]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO order_items (id, order_id, product_id, quantity, unit_price) VALUES (9012, 999999, 1, 1, 1)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FK item -> product]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[INSERT INTO order_items (id, order_id, product_id, quantity, unit_price) SELECT 9013, MIN(id), 999999, 1, 1 FROM orders]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="constraintRejectsInvalidRow(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="constraintRejectsInvalidRow" description="DB-02 Constraint rejects invalid data" data-provider="invalidRows" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FK parent delete restricted]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[DELETE FROM customers WHERE id = (SELECT MIN(customer_id) FROM orders)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- constraintRejectsInvalidRow -->
+        <test-method signature="validRowsAccepted()[pri:0, instance:com.qaportfolio.db.tests.SchemaValidationTest@4bdcaf36]" started-at="2026-11-23T00:28:54 IST" name="validRowsAccepted" description="DB-03 Positive control: a fully valid customer/order/item is accepted" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validRowsAccepted -->
+      </class> <!-- com.qaportfolio.db.tests.SchemaValidationTest -->
+      <class name="com.qaportfolio.db.tests.ReconciliationTest">
+        <test-method signature="countsMatchOracle()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="countsMatchOracle" description="DB-21 Row counts match the independent oracle" finished-at="2026-11-23T00:28:54 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- countsMatchOracle -->
+        <test-method is-config="true" signature="migrate()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="migrate" finished-at="2026-11-23T00:28:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migrate -->
+        <test-method signature="duplicateCustomerMerged()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="duplicateCustomerMerged" description="DB-26 Duplicate customer 41 is merged into survivor 1 and its orders follow" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- duplicateCustomerMerged -->
+        <test-method signature="grandTotalReconciles()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="grandTotalReconciles" description="DB-24 Grand total: legacy = migrated + rejected order totals" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- grandTotalReconciles -->
+        <test-method signature="rejectsMatchOracle()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="rejectsMatchOracle" description="DB-22 Rejects per table/reason match the oracle" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejectsMatchOracle -->
+        <test-method signature="rowCountReconciliation(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="rowCountReconciliation" description="DB-20 Row counts: legacy = migrated + rejected" data-provider="tables" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy_customers]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[customers]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rowCountReconciliation -->
+        <test-method signature="rowCountReconciliation(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="rowCountReconciliation" description="DB-20 Row counts: legacy = migrated + rejected" data-provider="tables" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy_orders]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[orders]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rowCountReconciliation -->
+        <test-method signature="rowCountReconciliation(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="rowCountReconciliation" description="DB-20 Row counts: legacy = migrated + rejected" data-provider="tables" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy_order_items]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[order_items]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rowCountReconciliation -->
+        <test-method signature="rowCountReconciliation(java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="rowCountReconciliation" description="DB-20 Row counts: legacy = migrated + rejected" data-provider="tables" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy_products]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[products]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rowCountReconciliation -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[25]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[50]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[77]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[120]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="sampledOrderMatchesLegacy(int)[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="sampledOrderMatchesLegacy" description="DB-25 Record-level comparison of sampled orders" data-provider="sampleOrders" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sampledOrderMatchesLegacy -->
+        <test-method signature="totalsPerCustomerReconcile()[pri:0, instance:com.qaportfolio.db.tests.ReconciliationTest@19593091]" started-at="2026-11-23T00:28:54 IST" name="totalsPerCustomerReconcile" description="DB-23 Sum of order totals per customer is unchanged (duplicates merged)" finished-at="2026-11-23T00:28:54 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalsPerCustomerReconcile -->
+      </class> <!-- com.qaportfolio.db.tests.ReconciliationTest -->
+      <class name="com.qaportfolio.db.tests.DataQualityTest">
+        <test-method signature="legacyDataProfile(java.lang.String,long,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="legacyDataProfile" description="DB-10 Legacy data profiling finds the seeded dirty rows" data-provider="legacyProfile" finished-at="2026-11-23T00:28:54 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy duplicate emails (case/space-insensitive)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) - COUNT(DISTINCT LOWER(TRIM(email))) FROM legacy_customers WHERE email IS NOT NULL AND TRIM(email) <> '']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- legacyDataProfile -->
+        <test-method is-config="true" signature="migrate()[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migrate" finished-at="2026-11-23T00:28:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migrate -->
+        <test-method signature="legacyDataProfile(java.lang.String,long,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="legacyDataProfile" description="DB-10 Legacy data profiling finds the seeded dirty rows" data-provider="legacyProfile" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy customers with NULL/blank email]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM legacy_customers WHERE email IS NULL OR TRIM(email) = '']]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- legacyDataProfile -->
+        <test-method signature="legacyDataProfile(java.lang.String,long,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="legacyDataProfile" description="DB-10 Legacy data profiling finds the seeded dirty rows" data-provider="legacyProfile" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy orphan order items]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM legacy_order_items i WHERE NOT EXISTS (SELECT 1 FROM legacy_orders o WHERE o.id = i.order_id)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- legacyDataProfile -->
+        <test-method signature="legacyDataProfile(java.lang.String,long,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="legacyDataProfile" description="DB-10 Legacy data profiling finds the seeded dirty rows" data-provider="legacyProfile" finished-at="2026-11-23T00:28:54 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy items with quantity <= 0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM legacy_order_items WHERE quantity <= 0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- legacyDataProfile -->
+        <test-method signature="legacyDataProfile(java.lang.String,long,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="legacyDataProfile" description="DB-10 Legacy data profiling finds the seeded dirty rows" data-provider="legacyProfile" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[legacy money values with stray whitespace]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM legacy_products WHERE price <> TRIM(price)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- legacyDataProfile -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[duplicates]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[customers with duplicate normalised email]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM (SELECT email_normalized FROM customers GROUP BY email_normalized HAVING COUNT(*) > 1) d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[duplicates]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[products with duplicate sku]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM (SELECT sku FROM products GROUP BY sku HAVING COUNT(*) > 1) d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[duplicates]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[duplicate product lines within an order]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM (SELECT order_id, product_id FROM order_items GROUP BY order_id, product_id HAVING COUNT(*) > 1) d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[referential integrity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[orders without customer]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM orders o LEFT JOIN customers c ON c.id = o.customer_id WHERE c.id IS NULL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[referential integrity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[items without order]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM order_items i LEFT JOIN orders o ON o.id = i.order_id WHERE o.id IS NULL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[referential integrity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[items without product]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM order_items i LEFT JOIN products p ON p.id = i.product_id WHERE p.id IS NULL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[referential integrity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[orders without any item]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM orders o WHERE NOT EXISTS (SELECT 1 FROM order_items i WHERE i.order_id = o.id)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[referential integrity]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[legacy customers not mapped and not rejected]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM legacy_customers c WHERE NOT EXISTS (SELECT 1 FROM legacy_customer_map m WHERE m.legacy_customer_id = c.id) AND NOT EXISTS (SELECT 1 FROM migration_rejects r WHERE r.source_table = 'legacy_customers' AND r.source_id = c.id)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data rules]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[emails not trimmed]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM customers WHERE email <> TRIM(email)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[data rules]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[status outside domain]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM orders WHERE status NOT IN ('NEW', 'PAID', 'SHIPPED', 'CANCELLED')]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+        <test-method signature="migratedDataIntegrity(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qaportfolio.db.tests.DataQualityTest@69cac930]" started-at="2026-11-23T00:28:54 IST" name="migratedDataIntegrity" description="DB-11 Migrated data has zero integrity violations" data-provider="integrity" finished-at="2026-11-23T00:28:54 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[totals]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[orders whose total != sum(quantity * unit_price)]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT COUNT(*) FROM orders o WHERE o.total <> (SELECT SUM(i.quantity * i.unit_price) FROM order_items i WHERE i.order_id = o.id)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migratedDataIntegrity -->
+      </class> <!-- com.qaportfolio.db.tests.DataQualityTest -->
+      <class name="com.qaportfolio.db.tests.TransactionRollbackTest">
+        <test-method is-config="true" signature="migrate()[pri:0, instance:com.qaportfolio.db.tests.TransactionRollbackTest@55ea2d70]" started-at="2026-11-23T00:28:54 IST" name="migrate" finished-at="2026-11-23T00:28:54 IST" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migrate -->
+        <test-method signature="failedFlywayMigrationLeavesNoPartialData()[pri:0, instance:com.qaportfolio.db.tests.TransactionRollbackTest@55ea2d70]" started-at="2026-11-23T00:28:54 IST" name="failedFlywayMigrationLeavesNoPartialData" description="DB-42 Failing Flyway migration (V6) is rolled back as a unit" finished-at="2026-11-23T00:28:54 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedFlywayMigrationLeavesNoPartialData -->
+        <test-method signature="failedJdbcBatchLeavesNoPartialData()[pri:0, instance:com.qaportfolio.db.tests.TransactionRollbackTest@55ea2d70]" started-at="2026-11-23T00:28:54 IST" name="failedJdbcBatchLeavesNoPartialData" description="DB-41 JDBC batch: failure on row 3 rolls back rows 1-2" finished-at="2026-11-23T00:28:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedJdbcBatchLeavesNoPartialData -->
+      </class> <!-- com.qaportfolio.db.tests.TransactionRollbackTest -->
+      <class name="com.qaportfolio.db.tests.RollbackTest">
+        <test-method signature="undoRestoresV2AndRemigrationIsRepeatable()[pri:0, instance:com.qaportfolio.db.tests.RollbackTest@6ad6fa53]" started-at="2026-11-23T00:28:54 IST" name="undoRestoresV2AndRemigrationIsRepeatable" description="DB-40 Undo scripts restore the V2 schema and data; re-migration is repeatable" finished-at="2026-11-23T00:28:54 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- undoRestoresV2AndRemigrationIsRepeatable -->
+      </class> <!-- com.qaportfolio.db.tests.RollbackTest -->
+      <class name="com.qaportfolio.db.tests.IdempotencyTest">
+        <test-method signature="migrateTwiceIsNoOp()[pri:0, instance:com.qaportfolio.db.tests.IdempotencyTest@5d39f2d8]" started-at="2026-11-23T00:28:54 IST" name="migrateTwiceIsNoOp" description="DB-30 Second migrate executes 0 migrations and changes no data" finished-at="2026-11-23T00:28:54 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- migrateTwiceIsNoOp -->
+      </class> <!-- com.qaportfolio.db.tests.IdempotencyTest -->
+    </test> <!-- migration-validation -->
+  </suite> <!-- 08-db-migration -->
+</testng-results>

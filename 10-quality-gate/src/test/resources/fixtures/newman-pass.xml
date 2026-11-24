@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DemoShop API Regression (DummyJSON)" tests="8" time="5.547">
+  <testsuite name="Data-driven products / Product by id from data file" id="e64e5fe9-cfba-49a0-8b03-e1c777230cec" timestamp="2026-11-22T18:45:53.834Z" tests="6" failures="0" errors="0" time="0.477">
+    <testcase name="Response time below 3000 ms" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+    <testcase name="Content-Type is JSON" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+    <testcase name="Status is 200" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+    <testcase name="Product matches JSON schema" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+    <testcase name="Id matches data row" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+    <testcase name="Category matches data row" time="0.400" classname="DataDrivenProductsProductByIdFromDataFile"/>
+  </testsuite>
+  <testsuite name="Data-driven products / Search from data file" id="74bf90dd-0e31-46e1-b9c7-905ce27a0383" timestamp="2026-11-22T18:45:53.834Z" tests="4" failures="0" errors="0" time="0.910">
+    <testcase name="Response time below 3000 ms" time="0.406" classname="DataDrivenProductsSearchFromDataFile"/>
+    <testcase name="Content-Type is JSON" time="0.406" classname="DataDrivenProductsSearchFromDataFile"/>
+    <testcase name="Status is 200" time="0.406" classname="DataDrivenProductsSearchFromDataFile"/>
+    <testcase name="Result count >= expectedMinResults" time="0.406" classname="DataDrivenProductsSearchFromDataFile"/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="18" passed="13" failed="5" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-11-23T00:52:41 IST" name="09-mobile" finished-at="2026-11-23T00:55:16 IST" duration-ms="154758">
+    <groups>
+      <group name="known-defect">
+        <method signature="AccessibilityTest.clickableElementsAreLabelled()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" name="clickableElementsAreLabelled" class="com.qaportfolio.mobile.tests.AccessibilityTest"/>
+        <method signature="AccessibilityTest.loginInputsLabelled()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" name="loginInputsLabelled" class="com.qaportfolio.mobile.tests.AccessibilityTest"/>
+        <method signature="AccessibilityTest.touchTargetsAtLeast48dp()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" name="touchTargetsAtLeast48dp" class="com.qaportfolio.mobile.tests.AccessibilityTest"/>
+        <method signature="DeviceConditionsTest.appSupportsLandscape()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" name="appSupportsLandscape" class="com.qaportfolio.mobile.tests.DeviceConditionsTest"/>
+        <method signature="PermissionsTest.denyCameraPermission()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" name="denyCameraPermission" class="com.qaportfolio.mobile.tests.PermissionsTest"/>
+      </group> <!-- known-defect -->
+    </groups>
+    <test started-at="2026-11-23T00:52:41 IST" name="android-my-demo-app" finished-at="2026-11-23T00:55:16 IST" duration-ms="154758">
+      <class name="com.qaportfolio.mobile.tests.InstallLaunchTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:41 IST" name="startSession" finished-at="2026-11-23T00:52:44 IST" duration-ms="2981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="appInstalledAndLaunches()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:44 IST" name="appInstalledAndLaunches" description="MOB-01 App installs and launches to the catalog (main activity)" finished-at="2026-11-23T00:52:45 IST" duration-ms="1146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appInstalledAndLaunches -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:45 IST" name="endSession" finished-at="2026-11-23T00:52:46 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:46 IST" name="startSession" finished-at="2026-11-23T00:52:49 IST" duration-ms="3489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="terminateAndRelaunch()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:49 IST" name="terminateAndRelaunch" description="MOB-02 App can be terminated and relaunched cleanly" finished-at="2026-11-23T00:52:52 IST" duration-ms="2713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateAndRelaunch -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.InstallLaunchTest@2ca6546f]" started-at="2026-11-23T00:52:52 IST" name="endSession" finished-at="2026-11-23T00:52:52 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.InstallLaunchTest -->
+      <class name="com.qaportfolio.mobile.tests.PermissionsTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:39 IST" name="startSession" finished-at="2026-11-23T00:54:42 IST" duration-ms="2396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="denyCameraPermission()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:42 IST" name="denyCameraPermission" description="MOB-40 Denying camera permission on QR scanner is handled gracefully (see DEF-MOB-01)" finished-at="2026-11-23T00:54:49 IST" duration-ms="7338" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[camera permission prompt re-appears after Deny (re-request loop)] 
+Expecting value to be false but was true]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [camera permission prompt re-appears after Deny (re-request loop)] 
+Expecting value to be false but was true
+at com.qaportfolio.mobile.tests.PermissionsTest.denyCameraPermission(PermissionsTest.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- denyCameraPermission -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:49 IST" name="endSession" finished-at="2026-11-23T00:54:50 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:50 IST" name="startSession" finished-at="2026-11-23T00:54:52 IST" duration-ms="2492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="grantLocationPermission()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:52 IST" name="grantLocationPermission" description="MOB-41 Granting location permission enables the Geo Location screen" finished-at="2026-11-23T00:54:57 IST" duration-ms="4912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- grantLocationPermission -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.PermissionsTest@50d3bf39]" started-at="2026-11-23T00:54:57 IST" name="endSession" finished-at="2026-11-23T00:54:57 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.PermissionsTest -->
+      <class name="com.qaportfolio.mobile.tests.DeviceConditionsTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:53:54 IST" name="startSession" finished-at="2026-11-23T00:53:57 IST" duration-ms="2482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="appSupportsLandscape()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:53:57 IST" name="appSupportsLandscape" description="MOB-33 App supports landscape orientation" finished-at="2026-11-23T00:54:01 IST" duration-ms="3703" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[App refuses landscape (portrait-locked activity): Screen rotation cannot be changed to ROTATION_270 after 2000ms. Is it locked programmatically?]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: App refuses landscape (portrait-locked activity): Screen rotation cannot be changed to ROTATION_270 after 2000ms. Is it locked programmatically?
+at com.qaportfolio.mobile.tests.DeviceConditionsTest.appSupportsLandscape(DeviceConditionsTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.InvalidElementStateException: Screen rotation cannot be changed to ROTATION_270 after 2000ms. Is it locked programmatically?
+Build info: version: '4.50.0', revision: 'be845fb be845fb44341cd7a6e7b27ba02dc1bdcf69dc51c'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.6.2', java.version: '26.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [7bf40a61-a1a3-41f8-af4c-e711fb6b657d, setScreenOrientation {orientation=LANDSCAPE}]
+Capabilities {appium:app: ~/Projects/qa-a..., appium:appActivity: .view.activities.SplashActi..., appium:appPackage: com.saucelabs.mydemoapp.and..., appium:appWaitActivity: *, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: ~/Projects/qa-a..., appActivity: .view.activities.SplashActi..., appPackage: com.saucelabs.mydemoapp.and..., appWaitActivity: *, autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulator-5554, fullReset: false, newCommandTimeout: 120, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 30, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone_arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2340, appium:deviceUDID: emulator-5554, appium:fullReset: false, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 120, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 11, appium:statBarHeight: 136, appium:takesScreenshot: true, appium:viewportRect: {height: 2204, left: 0, top: 136, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 7bf40a61-a1a3-41f8-af4c-e711fb6b657d
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:252)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:667)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:749)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:225)
+at io.appium.java_client.remote.SupportsRotation.rotate(SupportsRotation.java:47)
+at com.qaportfolio.mobile.tests.DeviceConditionsTest.appSupportsLandscape(DeviceConditionsTest.java:42)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- appSupportsLandscape -->
+        <test-method is-config="true" signature="restoreDevice()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:01 IST" name="restoreDevice" finished-at="2026-11-23T00:54:01 IST" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restoreDevice -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:01 IST" name="endSession" finished-at="2026-11-23T00:54:01 IST" duration-ms="227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:01 IST" name="startSession" finished-at="2026-11-23T00:54:04 IST" duration-ms="2494" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="backgroundAndForeground()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:04 IST" name="backgroundAndForeground" description="MOB-31 Sending the app to background and back keeps the cart" finished-at="2026-11-23T00:54:10 IST" duration-ms="6778" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- backgroundAndForeground -->
+        <test-method is-config="true" signature="restoreDevice()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:10 IST" name="restoreDevice" finished-at="2026-11-23T00:54:10 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restoreDevice -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:10 IST" name="endSession" finished-at="2026-11-23T00:54:11 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:11 IST" name="startSession" finished-at="2026-11-23T00:54:13 IST" duration-ms="2482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="deviceRotationKeepsState()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:13 IST" name="deviceRotationKeepsState" description="MOB-30 Device rotation (system setting) does not crash or lose screen state" finished-at="2026-11-23T00:54:24 IST" duration-ms="10538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deviceRotationKeepsState -->
+        <test-method is-config="true" signature="restoreDevice()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:24 IST" name="restoreDevice" finished-at="2026-11-23T00:54:24 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restoreDevice -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:24 IST" name="endSession" finished-at="2026-11-23T00:54:24 IST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:24 IST" name="startSession" finished-at="2026-11-23T00:54:27 IST" duration-ms="2486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="networkInterruptionAndRecovery()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:27 IST" name="networkInterruptionAndRecovery" description="MOB-32 Network loss: app stays usable offline and recovers when network returns" finished-at="2026-11-23T00:54:39 IST" duration-ms="12573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- networkInterruptionAndRecovery -->
+        <test-method is-config="true" signature="restoreDevice()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:39 IST" name="restoreDevice" finished-at="2026-11-23T00:54:39 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- restoreDevice -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.DeviceConditionsTest@3013909b]" started-at="2026-11-23T00:54:39 IST" name="endSession" finished-at="2026-11-23T00:54:39 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.DeviceConditionsTest -->
+      <class name="com.qaportfolio.mobile.tests.CoreJourneyTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:09 IST" name="startSession" finished-at="2026-11-23T00:53:12 IST" duration-ms="2520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="emptyLoginValidation()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:12 IST" name="emptyLoginValidation" description="MOB-22 Empty login shows field validation" finished-at="2026-11-23T00:53:15 IST" duration-ms="3492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyLoginValidation -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:15 IST" name="endSession" finished-at="2026-11-23T00:53:15 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:15 IST" name="startSession" finished-at="2026-11-23T00:53:18 IST" duration-ms="2530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="lockedOutUser()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:18 IST" name="lockedOutUser" description="MOB-21 Locked-out user cannot log in and sees an error" finished-at="2026-11-23T00:53:23 IST" duration-ms="5543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lockedOutUser -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:23 IST" name="endSession" finished-at="2026-11-23T00:53:24 IST" duration-ms="266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:24 IST" name="startSession" finished-at="2026-11-23T00:53:26 IST" duration-ms="2485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="purchaseJourney()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:26 IST" name="purchaseJourney" description="MOB-20 Core purchase journey completes" finished-at="2026-11-23T00:53:54 IST" duration-ms="27937" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseJourney -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.CoreJourneyTest@14151bc5]" started-at="2026-11-23T00:53:54 IST" name="endSession" finished-at="2026-11-23T00:53:54 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.CoreJourneyTest -->
+      <class name="com.qaportfolio.mobile.tests.NavigationTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:52:52 IST" name="startSession" finished-at="2026-11-23T00:52:54 IST" duration-ms="2446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="emptyCart()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:52:54 IST" name="emptyCart" description="MOB-12 Empty cart shows no items" finished-at="2026-11-23T00:52:56 IST" duration-ms="1154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emptyCart -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:52:56 IST" name="endSession" finished-at="2026-11-23T00:52:56 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:52:56 IST" name="startSession" finished-at="2026-11-23T00:52:58 IST" duration-ms="2432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="menuNavigation()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:52:58 IST" name="menuNavigation" description="MOB-11 Side menu navigates to Login and back to Catalog" finished-at="2026-11-23T00:53:03 IST" duration-ms="4850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menuNavigation -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:53:03 IST" name="endSession" finished-at="2026-11-23T00:53:03 IST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:53:03 IST" name="startSession" finished-at="2026-11-23T00:53:06 IST" duration-ms="2464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="productDetailsAndBack()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:53:06 IST" name="productDetailsAndBack" description="MOB-10 Catalog → product details → back returns to catalog" finished-at="2026-11-23T00:53:09 IST" duration-ms="2970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productDetailsAndBack -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.NavigationTest@7a639ec5]" started-at="2026-11-23T00:53:09 IST" name="endSession" finished-at="2026-11-23T00:53:09 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.NavigationTest -->
+      <class name="com.qaportfolio.mobile.tests.AccessibilityTest">
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:54:57 IST" name="startSession" finished-at="2026-11-23T00:55:00 IST" duration-ms="2473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="clickableElementsAreLabelled()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:00 IST" name="clickableElementsAreLabelled" description="MOB-51 Every clickable element has a content-desc or text" finished-at="2026-11-23T00:55:01 IST" duration-ms="1679" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[clickable elements TalkBack can only announce as 'button'] 
+Expecting empty but was: ["start1IV",
+    "start2IV",
+    "start3IV",
+    "start4IV",
+    "start5IV",
+    "start1IV",
+    "start2IV",
+    "start3IV",
+    "start4IV",
+    "start5IV"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [clickable elements TalkBack can only announce as 'button'] 
+Expecting empty but was: ["start1IV",
+    "start2IV",
+    "start3IV",
+    "start4IV",
+    "start5IV",
+    "start1IV",
+    "start2IV",
+    "start3IV",
+    "start4IV",
+    "start5IV"]
+at com.qaportfolio.mobile.tests.AccessibilityTest.clickableElementsAreLabelled(AccessibilityTest.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickableElementsAreLabelled -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:02 IST" name="endSession" finished-at="2026-11-23T00:55:02 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:02 IST" name="startSession" finished-at="2026-11-23T00:55:04 IST" duration-ms="2491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="keyControlsHaveContentDescription()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:04 IST" name="keyControlsHaveContentDescription" description="MOB-50 Key controls expose a content-description" finished-at="2026-11-23T00:55:06 IST" duration-ms="1085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- keyControlsHaveContentDescription -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:06 IST" name="endSession" finished-at="2026-11-23T00:55:06 IST" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:06 IST" name="startSession" finished-at="2026-11-23T00:55:08 IST" duration-ms="2472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="loginInputsLabelled()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:08 IST" name="loginInputsLabelled" description="MOB-53 Login inputs have an accessible label (hint/content-desc)" finished-at="2026-11-23T00:55:11 IST" duration-ms="2883" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[EditTexts without content-desc or hint] 
+Expecting empty but was: ["com.saucelabs.mydemoapp.android:id/nameET",
+    "com.saucelabs.mydemoapp.android:id/passwordET"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [EditTexts without content-desc or hint] 
+Expecting empty but was: ["com.saucelabs.mydemoapp.android:id/nameET",
+    "com.saucelabs.mydemoapp.android:id/passwordET"]
+at com.qaportfolio.mobile.tests.AccessibilityTest.loginInputsLabelled(AccessibilityTest.java:74)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginInputsLabelled -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:11 IST" name="endSession" finished-at="2026-11-23T00:55:12 IST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+        <test-method is-config="true" signature="startSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:12 IST" name="startSession" finished-at="2026-11-23T00:55:14 IST" duration-ms="2510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method signature="touchTargetsAtLeast48dp()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:14 IST" name="touchTargetsAtLeast48dp" description="MOB-52 Clickable targets are at least 48x48 dp" finished-at="2026-11-23T00:55:15 IST" duration-ms="1245" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[[touch targets below 48dp (density 2.75)] 
+Expecting empty but was: ["menuIV 30x30dp",
+    "sortIV 24x24dp",
+    "cartRL 30x30dp",
+    "start1IV 20x20dp",
+    "start2IV 20x20dp",
+    "start3IV 20x20dp",
+    "start4IV 20x20dp",
+    "start5IV 20x20dp",
+    "start1IV 20x20dp",
+    "start2IV 20x20dp",
+    "start3IV 20x20dp",
+    "start4IV 20x20dp",
+    "start5IV 20x20dp"]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: [touch targets below 48dp (density 2.75)] 
+Expecting empty but was: ["menuIV 30x30dp",
+    "sortIV 24x24dp",
+    "cartRL 30x30dp",
+    "start1IV 20x20dp",
+    "start2IV 20x20dp",
+    "start3IV 20x20dp",
+    "start4IV 20x20dp",
+    "start5IV 20x20dp",
+    "start1IV 20x20dp",
+    "start2IV 20x20dp",
+    "start3IV 20x20dp",
+    "start4IV 20x20dp",
+    "start5IV 20x20dp"]
+at com.qaportfolio.mobile.tests.AccessibilityTest.touchTargetsAtLeast48dp(AccessibilityTest.java:59)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- touchTargetsAtLeast48dp -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:com.qaportfolio.mobile.tests.AccessibilityTest@25a73de1]" started-at="2026-11-23T00:55:16 IST" name="endSession" finished-at="2026-11-23T00:55:16 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- com.qaportfolio.mobile.tests.AccessibilityTest -->
+    </test> <!-- android-my-demo-app -->
+  </suite> <!-- 09-mobile -->
+</testng-results>

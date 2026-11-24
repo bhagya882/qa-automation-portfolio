@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "overallPassRate": 100.00,
+  "modules": [
+    {"module": "03-api-testing", "passed": 200, "failed": 0, "skipped": 0, "retried": 0, "passRate": 100.00},
+    {"module": "10-quality-gate", "passed": 12, "failed": 0, "skipped": 0, "retried": 0, "passRate": 100.00}
+  ],
+  "breaches": [],
+  "flaky": []
+}

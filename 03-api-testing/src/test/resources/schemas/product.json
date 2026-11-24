@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Product",
+  "type": "object",
+  "required": ["id", "title", "description", "category", "price", "discountPercentage", "rating", "stock", "images", "thumbnail"],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "title": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "category": {"type": "string", "minLength": 1},
+    "price": {"type": "number", "minimum": 0.01},
+    "discountPercentage": {"type": "number", "minimum": 0, "maximum": 100},
+    "rating": {"type": "number", "minimum": 0, "maximum": 5},
+    "stock": {"type": "integer", "minimum": 0},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "brand": {"type": "string"},
+    "sku": {"type": "string"},
+    "dimensions": {
+      "type": "object",
+      "properties": {"width": {"type": "number"}, "height": {"type": "number"}, "depth": {"type": "number"}}
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rating", "comment"],
+        "properties": {"rating": {"type": "integer", "minimum": 1, "maximum": 5}, "comment": {"type": "string"}}
+      }
+    },
+    "images": {"type": "array", "items": {"type": "string", "pattern": "^https://"}},
+    "thumbnail": {"type": "string", "pattern": "^https://"}
+  }
+}

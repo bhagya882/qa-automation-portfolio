@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.qaportfolio</groupId>
+        <artifactId>qa-automation-portfolio</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>02-cross-browser-ui</artifactId>
+    <name>02 - Cross-Browser and Responsive UI Testing</name>
+
+    <dependencies>
+        <!-- Reuses the SauceDemo page objects from project 04 -->
+        <dependency>
+            <groupId>com.qaportfolio</groupId>
+            <artifactId>04-e2e-framework</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

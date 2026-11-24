@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DemoShop API Regression (DummyJSON)" tests="32" time="20.242">
+  <testsuite name="Auth / Login - valid credentials" id="3c36d3e7-8c93-450f-9f9b-69cd09f7573c" timestamp="2026-11-22T18:45:30.439Z" tests="6" failures="0" errors="0" time="1.743">
+    <testcase name="Response time below 3000 ms" time="1.743" classname="AuthLoginValidCredentials"/>
+    <testcase name="Content-Type is JSON" time="1.743" classname="AuthLoginValidCredentials"/>
+    <testcase name="Status is 200" time="1.743" classname="AuthLoginValidCredentials"/>
+    <testcase name="Login response matches JSON schema" time="1.743" classname="AuthLoginValidCredentials"/>
+    <testcase name="Access token is a JWT" time="1.743" classname="AuthLoginValidCredentials"/>
+    <testcase name="Username echoes request" time="1.743" classname="AuthLoginValidCredentials"/>
+  </testsuite>
+  <testsuite name="Auth / Get current user (/auth/me) with token" id="aab726c1-6bbc-4153-8062-fa27582488b9" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.344">
+    <testcase name="Response time below 3000 ms" time="0.344" classname="AuthGetCurrentUserAuthMeWithToken"/>
+    <testcase name="Content-Type is JSON" time="0.344" classname="AuthGetCurrentUserAuthMeWithToken"/>
+    <testcase name="Status is 200" time="0.344" classname="AuthGetCurrentUserAuthMeWithToken"/>
+    <testcase name="Returns the logged-in user" time="0.344" classname="AuthGetCurrentUserAuthMeWithToken"/>
+  </testsuite>
+  <testsuite name="Auth / Get current user without token" id="9ce4458e-c08a-4e0f-a367-f5141424efe7" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.401">
+    <testcase name="Response time below 3000 ms" time="0.401" classname="AuthGetCurrentUserWithoutToken"/>
+    <testcase name="Content-Type is JSON" time="0.401" classname="AuthGetCurrentUserWithoutToken"/>
+    <testcase name="Status is 401" time="0.401" classname="AuthGetCurrentUserWithoutToken"/>
+    <testcase name="Error message is &quot;Access Token is required&quot;" time="0.401" classname="AuthGetCurrentUserWithoutToken"/>
+  </testsuite>
+  <testsuite name="Auth / Get current user with garbage token" id="21888bf1-d836-4ce0-bc62-aa155e495002" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.611">
+    <testcase name="Response time below 3000 ms" time="0.611" classname="AuthGetCurrentUserWithGarbageToken"/>
+    <testcase name="Content-Type is JSON" time="0.611" classname="AuthGetCurrentUserWithGarbageToken"/>
+    <testcase name="Status is 401" time="0.611" classname="AuthGetCurrentUserWithGarbageToken"/>
+    <testcase name="Error message is &quot;Invalid/Expired Token!&quot;" time="0.611" classname="AuthGetCurrentUserWithGarbageToken"/>
+  </testsuite>
+  <testsuite name="Auth / Refresh token" id="29e6611a-9e7c-4b85-b171-8a23d726654c" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.346">
+    <testcase name="Response time below 3000 ms" time="0.346" classname="AuthRefreshToken"/>
+    <testcase name="Content-Type is JSON" time="0.346" classname="AuthRefreshToken"/>
+    <testcase name="Status is 200" time="0.346" classname="AuthRefreshToken"/>
+    <testcase name="New access + refresh tokens issued" time="0.346" classname="AuthRefreshToken"/>
+  </testsuite>
+  <testsuite name="Auth / Login - wrong password" id="f436c0a5-22aa-4cd2-ac37-f62997e9a2c0" timestamp="2026-11-22T18:45:30.439Z" tests="5" failures="0" errors="0" time="1.253">
+    <testcase name="Response time below 3000 ms" time="1.253" classname="AuthLoginWrongPassword"/>
+    <testcase name="Content-Type is JSON" time="1.253" classname="AuthLoginWrongPassword"/>
+    <testcase name="Rejected with 4xx" time="1.253" classname="AuthLoginWrongPassword"/>
+    <testcase name="No token issued" time="1.253" classname="AuthLoginWrongPassword"/>
+    <testcase name="Error message is &quot;Invalid credentials&quot;" time="1.253" classname="AuthLoginWrongPassword"/>
+  </testsuite>
+  <testsuite name="Auth / Login - missing fields" id="dc725141-b0f9-4fb3-b661-2ba8882f8a58" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.396">
+    <testcase name="Response time below 3000 ms" time="0.396" classname="AuthLoginMissingFields"/>
+    <testcase name="Content-Type is JSON" time="0.396" classname="AuthLoginMissingFields"/>
+    <testcase name="Status is 400" time="0.396" classname="AuthLoginMissingFields"/>
+    <testcase name="Error message is &quot;Username and password required&quot;" time="0.396" classname="AuthLoginMissingFields"/>
+  </testsuite>
+  <testsuite name="Products / List products (default page)" id="778a8d4f-560c-4f88-a2ac-8ee23b3a64e0" timestamp="2026-11-22T18:45:30.439Z" tests="5" failures="0" errors="0" time="0.091">
+    <testcase name="Response time below 3000 ms" time="0.091" classname="ProductsListProductsDefaultPage"/>
+    <testcase name="Content-Type is JSON" time="0.091" classname="ProductsListProductsDefaultPage"/>
+    <testcase name="Status is 200" time="0.091" classname="ProductsListProductsDefaultPage"/>
+    <testcase name="Product list matches JSON schema" time="0.091" classname="ProductsListProductsDefaultPage"/>
+    <testcase name="Default page size is 30" time="0.091" classname="ProductsListProductsDefaultPage"/>
+  </testsuite>
+  <testsuite name="Products / Pagination limit=5 skip=10" id="8ee372ec-d5b5-41a8-856c-6bba57fe5746" timestamp="2026-11-22T18:45:30.439Z" tests="5" failures="0" errors="0" time="0.343">
+    <testcase name="Response time below 3000 ms" time="0.343" classname="ProductsPaginationLimit5Skip10"/>
+    <testcase name="Content-Type is JSON" time="0.343" classname="ProductsPaginationLimit5Skip10"/>
+    <testcase name="Status is 200" time="0.343" classname="ProductsPaginationLimit5Skip10"/>
+    <testcase name="Returns 5 products starting at id 11" time="0.343" classname="ProductsPaginationLimit5Skip10"/>
+    <testcase name="select= returns only requested fields + id" time="0.343" classname="ProductsPaginationLimit5Skip10"/>
+  </testsuite>
+  <testsuite name="Products / Sort by price ascending" id="ed6fa130-8cb6-4962-beb1-e4d34bdbbdc5" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.726">
+    <testcase name="Response time below 3000 ms" time="0.726" classname="ProductsSortByPriceAscending"/>
+    <testcase name="Content-Type is JSON" time="0.726" classname="ProductsSortByPriceAscending"/>
+    <testcase name="Status is 200" time="0.726" classname="ProductsSortByPriceAscending"/>
+    <testcase name="Prices are ascending" time="0.726" classname="ProductsSortByPriceAscending"/>
+  </testsuite>
+  <testsuite name="Products / Search products (q=phone)" id="a03d0a1e-585f-4300-b1eb-e8c6e9cdce49" timestamp="2026-11-22T18:45:30.439Z" tests="5" failures="0" errors="0" time="0.950">
+    <testcase name="Response time below 3000 ms" time="0.950" classname="ProductsSearchProductsQPhone"/>
+    <testcase name="Content-Type is JSON" time="0.950" classname="ProductsSearchProductsQPhone"/>
+    <testcase name="Status is 200" time="0.950" classname="ProductsSearchProductsQPhone"/>
+    <testcase name="Search result matches JSON schema" time="0.950" classname="ProductsSearchProductsQPhone"/>
+    <testcase name="At least one result" time="0.950" classname="ProductsSearchProductsQPhone"/>
+  </testsuite>
+  <testsuite name="Products / Product by id" id="dfae3a68-0512-49aa-b37f-77afbcacd91a" timestamp="2026-11-22T18:45:30.439Z" tests="5" failures="0" errors="0" time="0.103">
+    <testcase name="Response time below 3000 ms" time="0.103" classname="ProductsProductById"/>
+    <testcase name="Content-Type is JSON" time="0.103" classname="ProductsProductById"/>
+    <testcase name="Status is 200" time="0.103" classname="ProductsProductById"/>
+    <testcase name="Product matches JSON schema" time="0.103" classname="ProductsProductById"/>
+    <testcase name="Id is 1" time="0.103" classname="ProductsProductById"/>
+  </testsuite>
+  <testsuite name="Products / Product not found" id="468ffdbd-4ae6-48cd-a8a1-e488d3f5a74c" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.343">
+    <testcase name="Response time below 3000 ms" time="0.343" classname="ProductsProductNotFound"/>
+    <testcase name="Content-Type is JSON" time="0.343" classname="ProductsProductNotFound"/>
+    <testcase name="Status is 404" time="0.343" classname="ProductsProductNotFound"/>
+    <testcase name="Error message is &quot;Product with id '99999' not found&quot;" time="0.343" classname="ProductsProductNotFound"/>
+  </testsuite>
+  <testsuite name="Products / Category list" id="c490e283-2f3e-4bf8-a688-a1d23aef6749" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="1.059">
+    <testcase name="Response time below 3000 ms" time="1.059" classname="ProductsCategoryList"/>
+    <testcase name="Content-Type is JSON" time="1.059" classname="ProductsCategoryList"/>
+    <testcase name="Status is 200" time="1.059" classname="ProductsCategoryList"/>
+    <testcase name="Contains laptops and smartphones" time="1.059" classname="ProductsCategoryList"/>
+  </testsuite>
+  <testsuite name="Products / Products by category (laptops)" id="00e31932-2b25-42b1-9771-a6faed359984" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="1.283">
+    <testcase name="Response time below 3000 ms" time="1.283" classname="ProductsProductsByCategoryLaptops"/>
+    <testcase name="Content-Type is JSON" time="1.283" classname="ProductsProductsByCategoryLaptops"/>
+    <testcase name="Status is 200" time="1.283" classname="ProductsProductsByCategoryLaptops"/>
+    <testcase name="Every product is a laptop" time="1.283" classname="ProductsProductsByCategoryLaptops"/>
+  </testsuite>
+  <testsuite name="Products / Add product (simulated)" id="3e07ce65-c3cd-4f73-a394-02c54725f270" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.343">
+    <testcase name="Response time below 3000 ms" time="0.343" classname="ProductsAddProductSimulated"/>
+    <testcase name="Content-Type is JSON" time="0.343" classname="ProductsAddProductSimulated"/>
+    <testcase name="Status is 201" time="0.343" classname="ProductsAddProductSimulated"/>
+    <testcase name="Echoes title and assigns id" time="0.343" classname="ProductsAddProductSimulated"/>
+  </testsuite>
+  <testsuite name="Products / Update product (PATCH price)" id="9f67035c-bfd9-48f9-8faf-186c9058a9f9" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.398">
+    <testcase name="Response time below 3000 ms" time="0.398" classname="ProductsUpdateProductPatchPrice"/>
+    <testcase name="Content-Type is JSON" time="0.398" classname="ProductsUpdateProductPatchPrice"/>
+    <testcase name="Status is 200" time="0.398" classname="ProductsUpdateProductPatchPrice"/>
+    <testcase name="Price updated" time="0.398" classname="ProductsUpdateProductPatchPrice"/>
+  </testsuite>
+  <testsuite name="Products / Delete product (simulated)" id="d1d5201b-849b-4d2c-a1a5-ffef17dbffc7" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.861">
+    <testcase name="Response time below 3000 ms" time="0.861" classname="ProductsDeleteProductSimulated"/>
+    <testcase name="Content-Type is JSON" time="0.861" classname="ProductsDeleteProductSimulated"/>
+    <testcase name="Status is 200" time="0.861" classname="ProductsDeleteProductSimulated"/>
+    <testcase name="isDeleted flag set" time="0.861" classname="ProductsDeleteProductSimulated"/>
+  </testsuite>
+  <testsuite name="Carts / Get cart 1 - totals consistent" id="7f8316e6-9565-4dec-b5e9-507ca46adfc9" timestamp="2026-11-22T18:45:30.439Z" tests="7" failures="0" errors="0" time="0.382">
+    <testcase name="Response time below 3000 ms" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="Content-Type is JSON" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="Status is 200" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="Cart matches JSON schema" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="Line total = price x quantity" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="Cart total = sum of lines" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+    <testcase name="totalQuantity = sum of quantities" time="0.382" classname="CartsGetCart1TotalsConsistent"/>
+  </testsuite>
+  <testsuite name="Carts / Carts of logged-in user" id="705e8b7f-2c43-4baf-bbd4-3e2b6596d8d7" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.418">
+    <testcase name="Response time below 3000 ms" time="0.418" classname="CartsCartsOfLoggedInUser"/>
+    <testcase name="Content-Type is JSON" time="0.418" classname="CartsCartsOfLoggedInUser"/>
+    <testcase name="Status is 200" time="0.418" classname="CartsCartsOfLoggedInUser"/>
+    <testcase name="All carts belong to user" time="0.418" classname="CartsCartsOfLoggedInUser"/>
+  </testsuite>
+  <testsuite name="Carts / Add cart" id="f803a15d-a8c8-411f-8172-46121293fe49" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.396">
+    <testcase name="Response time below 3000 ms" time="0.396" classname="CartsAddCart"/>
+    <testcase name="Content-Type is JSON" time="0.396" classname="CartsAddCart"/>
+    <testcase name="Status is 201" time="0.396" classname="CartsAddCart"/>
+    <testcase name="Two lines, quantity 3" time="0.396" classname="CartsAddCart"/>
+  </testsuite>
+  <testsuite name="Carts / Update cart (merge)" id="7157f346-4a3f-419e-a762-927e3f48ac57" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.348">
+    <testcase name="Response time below 3000 ms" time="0.348" classname="CartsUpdateCartMerge"/>
+    <testcase name="Content-Type is JSON" time="0.348" classname="CartsUpdateCartMerge"/>
+    <testcase name="Status is 200" time="0.348" classname="CartsUpdateCartMerge"/>
+    <testcase name="Cart id unchanged" time="0.348" classname="CartsUpdateCartMerge"/>
+  </testsuite>
+  <testsuite name="Carts / Delete cart" id="98ae93e5-b653-4cca-a80f-812aa43e97ea" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.933">
+    <testcase name="Response time below 3000 ms" time="0.933" classname="CartsDeleteCart"/>
+    <testcase name="Content-Type is JSON" time="0.933" classname="CartsDeleteCart"/>
+    <testcase name="Status is 200" time="0.933" classname="CartsDeleteCart"/>
+    <testcase name="isDeleted flag set" time="0.933" classname="CartsDeleteCart"/>
+  </testsuite>
+  <testsuite name="Users / User by id" id="40e1faf7-9ced-4e9f-9b41-bee5604269ff" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.929">
+    <testcase name="Response time below 3000 ms" time="0.929" classname="UsersUserById"/>
+    <testcase name="Content-Type is JSON" time="0.929" classname="UsersUserById"/>
+    <testcase name="Status is 200" time="0.929" classname="UsersUserById"/>
+    <testcase name="User matches JSON schema" time="0.929" classname="UsersUserById"/>
+  </testsuite>
+  <testsuite name="Users / Filter users by hair colour" id="6d885d2e-052e-4c11-88e7-f01af1a6883c" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.605">
+    <testcase name="Response time below 3000 ms" time="0.605" classname="UsersFilterUsersByHairColour"/>
+    <testcase name="Content-Type is JSON" time="0.605" classname="UsersFilterUsersByHairColour"/>
+    <testcase name="Status is 200" time="0.605" classname="UsersFilterUsersByHairColour"/>
+    <testcase name="Only brown hair" time="0.605" classname="UsersFilterUsersByHairColour"/>
+  </testsuite>
+  <testsuite name="Users / User not found" id="53cb5d12-2e0f-40d9-80a8-d81cbc0e0fe6" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.416">
+    <testcase name="Response time below 3000 ms" time="0.416" classname="UsersUserNotFound"/>
+    <testcase name="Content-Type is JSON" time="0.416" classname="UsersUserNotFound"/>
+    <testcase name="Status is 404" time="0.416" classname="UsersUserNotFound"/>
+    <testcase name="Error message is &quot;User with id '0' not found&quot;" time="0.416" classname="UsersUserNotFound"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Invalid limit (-1)" id="a5c21d7a-8a6b-4404-982b-cde42118b7b3" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.397">
+    <testcase name="Response time below 3000 ms" time="0.397" classname="NegativeAmpValidationInvalidLimit1"/>
+    <testcase name="Content-Type is JSON" time="0.397" classname="NegativeAmpValidationInvalidLimit1"/>
+    <testcase name="Status is 400" time="0.397" classname="NegativeAmpValidationInvalidLimit1"/>
+    <testcase name="Error message is &quot;Invalid 'limit' - should be a positive number&quot;" time="0.397" classname="NegativeAmpValidationInvalidLimit1"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Invalid limit (abc)" id="ac1218ac-11f8-4c78-afc3-e8aac09675b6" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.373">
+    <testcase name="Response time below 3000 ms" time="0.373" classname="NegativeAmpValidationInvalidLimitAbc"/>
+    <testcase name="Content-Type is JSON" time="0.373" classname="NegativeAmpValidationInvalidLimitAbc"/>
+    <testcase name="Status is 400" time="0.373" classname="NegativeAmpValidationInvalidLimitAbc"/>
+    <testcase name="Error message is &quot;Invalid 'limit' - should be a positive number&quot;" time="0.373" classname="NegativeAmpValidationInvalidLimitAbc"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Invalid skip (-5)" id="47d74dda-acb5-4751-9d3c-4331650afa95" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="0.667">
+    <testcase name="Response time below 3000 ms" time="0.667" classname="NegativeAmpValidationInvalidSkip5"/>
+    <testcase name="Content-Type is JSON" time="0.667" classname="NegativeAmpValidationInvalidSkip5"/>
+    <testcase name="Status is 400" time="0.667" classname="NegativeAmpValidationInvalidSkip5"/>
+    <testcase name="Error message is &quot;Invalid 'skip' - should be a positive number&quot;" time="0.667" classname="NegativeAmpValidationInvalidSkip5"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Add cart with empty products" id="5698badc-fe12-46e5-8512-e9f90c3ed4ae" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="1.152">
+    <testcase name="Response time below 3000 ms" time="1.152" classname="NegativeAmpValidationAddCartWithEmptyProducts"/>
+    <testcase name="Content-Type is JSON" time="1.152" classname="NegativeAmpValidationAddCartWithEmptyProducts"/>
+    <testcase name="Status is 400" time="1.152" classname="NegativeAmpValidationAddCartWithEmptyProducts"/>
+    <testcase name="Error message is &quot;products can not be empty&quot;" time="1.152" classname="NegativeAmpValidationAddCartWithEmptyProducts"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Carts of unknown user" id="9600c9de-92e1-4f66-9a9a-baab91ea9a29" timestamp="2026-11-22T18:45:30.439Z" tests="4" failures="0" errors="0" time="1.233">
+    <testcase name="Response time below 3000 ms" time="1.233" classname="NegativeAmpValidationCartsOfUnknownUser"/>
+    <testcase name="Content-Type is JSON" time="1.233" classname="NegativeAmpValidationCartsOfUnknownUser"/>
+    <testcase name="Status is 404" time="1.233" classname="NegativeAmpValidationCartsOfUnknownUser"/>
+    <testcase name="Error message is &quot;User with id '99999' not found&quot;" time="1.233" classname="NegativeAmpValidationCartsOfUnknownUser"/>
+  </testsuite>
+  <testsuite name="Negative &amp; validation / Update unknown product" id="b25c4154-45d0-492c-9016-84a6e89af93d" timestamp="2026-11-22T18:45:30.439Z" tests="3" failures="0" errors="0" time="0.399">
+    <testcase name="Response time below 3000 ms" time="0.399" classname="NegativeAmpValidationUpdateUnknownProduct"/>
+    <testcase name="Content-Type is JSON" time="0.399" classname="NegativeAmpValidationUpdateUnknownProduct"/>
+    <testcase name="Status is 404" time="0.399" classname="NegativeAmpValidationUpdateUnknownProduct"/>
+  </testsuite>
+</testsuites>

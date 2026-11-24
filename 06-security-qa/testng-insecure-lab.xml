@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Vulnerable-lab run: the SAME tests against the Demo Store in insecure mode (seeded vulnerabilities).
+     Failures are EXPECTED and are the detected findings. Never part of the PR gate.
+     Run: ./mvnw -pl 06-security-qa test -Dsuite=testng-insecure-lab.xml -DtestFailureIgnore=true -->
+<suite name="06 Security QA - insecure lab" verbose="1">
+    <parameter name="mode" value="insecure"/>
+    <test name="owasp-top10-insecure-lab">
+        <packages>
+            <package name="com.qaportfolio.security"/>
+        </packages>
+    </test>
+</suite>

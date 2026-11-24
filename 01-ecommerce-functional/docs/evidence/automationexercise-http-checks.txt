@@ -1,0 +1,37 @@
+# automationexercise.com HTTP checks – 2026-11-22T19:00:04Z (curl 8.7.1)
+
+$ curl -X POST https://automationexercise.com/api/verifyLogin -d email=nobody@example.test -d password=wrong
+HTTP 200
+{"responseCode": 404, "message": "User not found!"}
+
+$ curl -X POST https://automationexercise.com/api/verifyLogin -d password=wrong
+HTTP 200
+{"responseCode": 400, "message": "Bad request, email or password parameter is missing in POST request."}
+
+$ curl -X POST https://automationexercise.com/api/searchProduct
+HTTP 200
+{"responseCode": 400, "message": "Bad request, search_product parameter is missing in POST request."}
+
+$ curl -X POST https://automationexercise.com/api/searchProduct -d search_product=zzzxqq
+HTTP 200
+{"responseCode": 200, "products": []}
+
+$ curl -X DELETE https://automationexercise.com/api/verifyLogin
+HTTP 200
+{"responseCode": 405, "message": "This request method is not supported."}
+
+$ curl https://automationexercise.com/product_details/9999  (product name <h2> and price)
+<h2>Category</h2>
+<h2>Brands</h2>
+<h2></h2>
+<h2>Subscription</h2>
+HTTP 200
+
+$ curl https://automationexercise.com/checkout  (anonymous, empty cart; visible headings)
+Address Details
+Place Order
+Review Your Order
+Total Amount
+
+$ curl 'https://automationexercise.com/products?search=zzzxqq'  (product cards found)
+0

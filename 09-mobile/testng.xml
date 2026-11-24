@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Needs an Appium server + emulator/device; tests SKIP (blocked) when either is missing. -->
+<suite name="09-mobile" verbose="1">
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="android-my-demo-app" preserve-order="true">
+        <classes>
+            <class name="com.qaportfolio.mobile.tests.InstallLaunchTest"/>
+            <class name="com.qaportfolio.mobile.tests.NavigationTest"/>
+            <class name="com.qaportfolio.mobile.tests.CoreJourneyTest"/>
+            <class name="com.qaportfolio.mobile.tests.DeviceConditionsTest"/>
+            <class name="com.qaportfolio.mobile.tests.PermissionsTest"/>
+            <class name="com.qaportfolio.mobile.tests.AccessibilityTest"/>
+        </classes>
+    </test>
+</suite>

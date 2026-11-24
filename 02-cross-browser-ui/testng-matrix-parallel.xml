@@ -1,0 +1,120 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Full matrix: chrome/firefox/edge x 4 viewports + Chrome device emulation (parallel).
+     Safari runs from testng-safari.xml (sequential; safaridriver allows only one session). -->
+<suite name="02 Cross-browser - matrix" parallel="tests" thread-count="4">
+    <listeners>
+        <listener class-name="com.qaportfolio.core.listeners.RetryTransformer"/>
+    </listeners>
+    <test name="chrome desktop-fhd 1920x1080">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="viewport" value="1920x1080"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="chrome laptop 1366x768">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="viewport" value="1366x768"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="chrome tablet 768x1024">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="viewport" value="768x1024"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="chrome phone 390x844">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="viewport" value="390x844"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="firefox desktop-fhd 1920x1080">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="viewport" value="1920x1080"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="firefox laptop 1366x768">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="viewport" value="1366x768"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="firefox tablet 768x1024">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="viewport" value="768x1024"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="firefox phone 390x844">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="viewport" value="390x844"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="edge desktop-fhd 1920x1080">
+        <parameter name="browser" value="edge"/>
+        <parameter name="viewport" value="1920x1080"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="edge laptop 1366x768">
+        <parameter name="browser" value="edge"/>
+        <parameter name="viewport" value="1366x768"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="edge tablet 768x1024">
+        <parameter name="browser" value="edge"/>
+        <parameter name="viewport" value="768x1024"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="edge phone 390x844">
+        <parameter name="browser" value="edge"/>
+        <parameter name="viewport" value="390x844"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="chrome emulated iPhone 14 Pro Max">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="device" value="iPhone 14 Pro Max"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+    <test name="chrome emulated Pixel 7">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="device" value="Pixel 7"/>
+        <classes>
+            <class name="com.qaportfolio.crossbrowser.ResponsiveJourneyTest"/>
+            <class name="com.qaportfolio.crossbrowser.VisualConsistencyTest"/>
+        </classes>
+    </test>
+</suite>

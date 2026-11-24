@@ -1,0 +1,13 @@
+{
+  "description": "Accepted, already-reported axe violations (scan of 2026-11-23, axe-core 4.10, tags wcag2a/aa, wcag21a/aa, wcag22aa, best-practice). Remove an entry once the defect is fixed so it can never regress.",
+  "knownViolations": [
+    {"page": "LOGIN",             "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "LOGIN",             "rule": "region",               "defect": "DEF-A11Y-05"},
+    {"page": "INVENTORY",         "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "PRODUCT_DETAILS",   "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "CART",              "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "CHECKOUT_STEP_ONE", "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "CHECKOUT_STEP_TWO", "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"},
+    {"page": "CHECKOUT_COMPLETE", "rule": "page-has-heading-one", "defect": "DEF-A11Y-05"}
+  ]
+}

@@ -1,0 +1,5 @@
+productId,expectedCategory,searchTerm,expectedMinResults
+1,beauty,mascara,1
+6,fragrances,fragrance,5
+78,laptops,laptop,1
+121,smartphones,iphone,1

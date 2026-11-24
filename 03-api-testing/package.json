@@ -1,0 +1,17 @@
+{
+  "name": "qa-portfolio-api-newman",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Project 03 - Postman/Newman regression for the DummyJSON public test API",
+  "scripts": {
+    "test": "npm run test:regression && npm run test:data-driven",
+    "test:regression": "newman run postman/DemoShop-API.postman_collection.json -e postman/dummyjson.postman_environment.json --folder Auth --folder Products --folder Carts --folder Users --folder \"Negative & validation\" --delay-request 50 -r cli,junit,htmlextra --reporter-junit-export target/newman/regression-junit.xml --reporter-htmlextra-export target/newman/regression-report.html --reporter-htmlextra-title \"DemoShop API regression\"",
+    "test:data-driven": "newman run postman/DemoShop-API.postman_collection.json -e postman/dummyjson.postman_environment.json --folder \"Data-driven products\" -d postman/data/products.csv -r cli,junit,htmlextra --reporter-junit-export target/newman/data-driven-junit.xml --reporter-htmlextra-export target/newman/data-driven-report.html",
+    "test:defects": "newman run postman/DemoShop-API.postman_collection.json -e postman/dummyjson.postman_environment.json --folder \"Known defects\" -r cli,junit,htmlextra --reporter-junit-export target/newman-defects/known-defects-junit.xml --reporter-htmlextra-export target/newman-defects/known-defects-report.html",
+    "evidence": "node scripts/collect-evidence.js"
+  },
+  "devDependencies": {
+    "newman": "6.2.1",
+    "newman-reporter-htmlextra": "1.23.1"
+  }
+}

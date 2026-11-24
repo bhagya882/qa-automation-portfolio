@@ -1,0 +1,5 @@
+# Downloaded test builds are never committed
+apps/
+*.apk
+*.ipa
+*.app
